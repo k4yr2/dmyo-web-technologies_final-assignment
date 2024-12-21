@@ -11,8 +11,18 @@
     {
         Unknown,
 
+        Novel,
+
         History,
 
         Philosophy,
+
+        Biography,
+
+        PD,
+
+        Sociology,
+
+        Politics
     }
 }
