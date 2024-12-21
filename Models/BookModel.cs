@@ -2,6 +2,8 @@
 {
     public class BookModel : BaseModel
     {
+        public string? Title { get; set; }
+
         public int AuthorId { get; set; }
 
         public BookGenre Genre { get; set; }
