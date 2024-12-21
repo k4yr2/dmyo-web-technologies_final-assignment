@@ -4,10 +4,10 @@
     {
         public int AuthorId { get; set; }
 
-        public BookCategory Category { get; set; }
+        public BookGenre Genre { get; set; }
     }
 
-    public enum BookCategory
+    public enum BookGenre
     {
         Unknown,
 
