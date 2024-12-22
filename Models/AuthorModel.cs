@@ -5,6 +5,33 @@
         public AuthorName Name { get; } = new();
 
         public AuthorDate Date { get; } = new();
+
+        public int? Age
+        {
+            get
+            {
+                if(Date.Birth == null)
+                {
+                    return null;
+                }
+
+                DateTime birth = Date.Birth.Value;
+                DateTime last = Date.Death == null
+                    ? DateTime.Today
+                    : Date.Death.Value;
+
+
+                int age = last.Year - birth.Year;
+
+                // Ay ve gün kontrolü
+                if (birth.Date > last.AddYears(-age))
+                {
+                    age--;
+                }
+
+                return age;
+            }
+        }
     }
 
     public class AuthorName
