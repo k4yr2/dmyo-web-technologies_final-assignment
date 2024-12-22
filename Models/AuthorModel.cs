@@ -1,10 +1,12 @@
-﻿namespace muhammedkayraozkaya_241103046.Models
-{
-    public class AuthorModel(int id) : BaseModel(id)
-    {
-        public AuthorName Name { get; } = new();
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-        public AuthorDate Date { get; } = new();
+namespace muhammedkayraozkaya_241103046.Models
+{
+    public class AuthorModel(int id, AuthorName name, AuthorDate date) : BaseModel(id)
+    {
+        public AuthorName Name { get; } = name;
+
+        public AuthorDate Date { get; } = date;
 
         public int? GetAge()
         {
