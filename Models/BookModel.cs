@@ -6,31 +6,12 @@
 
         public string? Description { get; set; }
 
+        public int GenreId { get; set; }
+
         public int AuthorId { get; set; }
 
         public int StockCount { get; set; }
 
         public int Rating { get; set; }
-
-        public BookGenre Genre { get; set; }
-    }
-
-    public enum BookGenre
-    {
-        Unknown,
-
-        Novel,
-
-        History,
-
-        Philosophy,
-
-        Biography,
-
-        PD,
-
-        Sociology,
-
-        Politics
     }
 }
