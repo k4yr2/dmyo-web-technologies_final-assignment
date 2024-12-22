@@ -33,5 +33,13 @@ namespace muhammedkayraozkaya_241103046.Datas
         {
             return cache.TryGetValue(id, out model);
         }
+
+        /// <summary>
+        /// Remove specified id
+        /// </summary> 
+        public bool Remove(int id, out TModel? model)
+        {
+            return cache.Remove(id, out model);
+        }
     }
 }
