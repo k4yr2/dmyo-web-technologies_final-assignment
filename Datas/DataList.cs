@@ -25,5 +25,13 @@ namespace muhammedkayraozkaya_241103046.Datas
             ArgumentNullException.ThrowIfNull(model, nameof(model));
             return cache.TryAdd(model.Id, model);
         }
+
+        /// <summary>
+        /// Model with specified id
+        /// </summary>
+        public bool Model(int id, out TModel? model)
+        {
+            return cache.TryGetValue(id, out model);
+        }
     }
 }
