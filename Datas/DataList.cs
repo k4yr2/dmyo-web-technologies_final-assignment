@@ -7,6 +7,17 @@ namespace muhammedkayraozkaya_241103046.Datas
         readonly Dictionary<int, TModel> cache = new();
 
         /// <summary>
+        /// Pool containing models
+        /// </summary>
+        public IEnumerable<TModel> Models
+        {
+            get
+            {
+                return cache.Values;
+            }
+        }
+
+        /// <summary>
         /// Append model with its unique id
         /// </summary>
         public bool Append(TModel model)
