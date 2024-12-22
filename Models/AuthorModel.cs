@@ -6,31 +6,28 @@
 
         public AuthorDate Date { get; } = new();
 
-        public int? Age
+        public int? GetAge()
         {
-            get
+            if (Date.Birth == null)
             {
-                if(Date.Birth == null)
-                {
-                    return null;
-                }
-
-                DateTime birth = Date.Birth.Value;
-                DateTime last = Date.Death == null
-                    ? DateTime.Today
-                    : Date.Death.Value;
-
-
-                int age = last.Year - birth.Year;
-
-                // Ay ve gün kontrolü
-                if (birth.Date > last.AddYears(-age))
-                {
-                    age--;
-                }
-
-                return age;
+                return null;
             }
+
+            DateTime birth = Date.Birth.Value;
+            DateTime last = Date.Death == null
+                ? DateTime.Today
+                : Date.Death.Value;
+
+
+            int age = last.Year - birth.Year;
+
+            // Ay ve gün kontrolü
+            if (birth.Date > last.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
         }
     }
 
