@@ -10,8 +10,8 @@
 
         public string? Description { get; set; }
 
-        public int StockCount { get; }
+        public int StockCount { get; set; }
 
-        public int Rating { get; }
+        public int Rating { get; set; }
     }
 }
