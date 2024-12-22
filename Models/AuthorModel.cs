@@ -1,6 +1,6 @@
 ﻿namespace muhammedkayraozkaya_241103046.Models
 {
-    public class AuthorModel : BaseModel
+    public class AuthorModel(int id) : BaseModel(id)
     {
         public AuthorName Name { get; } = new();
 

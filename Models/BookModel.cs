@@ -1,6 +1,6 @@
 ﻿namespace muhammedkayraozkaya_241103046.Models
 {
-    public class BookModel : BaseModel
+    public class BookModel(int id) : BaseModel(id)
     {
         public string? Title { get; set; }
 
