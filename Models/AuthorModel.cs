@@ -39,6 +39,9 @@ namespace muhammedkayraozkaya_241103046.Models
 
         public string? Last { get; set; }
 
+        public string? Nick { get; set; }
+
+
         public string? GetFull()
         {
             var flag = First == null;
