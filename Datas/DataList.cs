@@ -6,5 +6,13 @@ namespace muhammedkayraozkaya_241103046.Datas
     {
         readonly Dictionary<int, TModel> cache = new();
 
+        /// <summary>
+        /// Append model with its unique id
+        /// </summary>
+        public bool Append(TModel model)
+        {
+            ArgumentNullException.ThrowIfNull(model, nameof(model));
+            return cache.TryAdd(model.Id, model);
+        }
     }
 }
