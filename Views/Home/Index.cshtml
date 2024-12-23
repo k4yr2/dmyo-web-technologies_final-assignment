@@ -2,8 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <div></div>
+<div>
+    @foreach (var book in DataStore.books.Models)
+    {
+        <div class="book">
+            <h4>@book.Title</h4>
+            <p>@book.Description</p>
+            <p>@book.Rating.ToString("F1")</p>
+            <p>@book.StockCount</p>
+        </div>
+    }
 </div>
