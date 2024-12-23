@@ -2,8 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>
-    @foreach (var book in DataStore.books.Models)
+<div class="books">
+    @foreach (var book in EnumerableBooks.MostRating.Take(5))
     {
         <div class="book">
             <h4>@book.Title</h4>
