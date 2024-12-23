@@ -211,398 +211,69 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             int i = 0;
             Random random = new();
+  
+            // **Roman** (GenreId: 0)
+            books.Append(new(i++, 0, 0) { Title = "Suç ve Ceza", Description = "Fyodor Dostoyevski'nin başyapıtlarından biri, insanın içsel çatışmalarını ele alır.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 0, 1) { Title = "1984", Description = "George Orwell'in distopik romanı, totaliter rejimin tehlikelerini vurgular.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 0, 2) { Title = "Küçük Prens", Description = "Antoine de Saint-Exupéry'nin ünlü masalı, yaşam ve insanlık üzerine derin anlamlar taşır.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 0, 3) { Title = "Harry Potter ve Felsefe Taşı", Description = "J.K. Rowling'in fantastik serisinin ilk kitabı, genç bir büyücünün hikayesini anlatır.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 0, 4) { Title = "Simyacı", Description = "Paulo Coelho'nun, kişisel efsaneyi bulmak için bir yolculuğa çıkan bir gencin hikayesini anlatan romanı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 0, 5) { Title = "Sefiller", Description = "Victor Hugo'nun Fransız devrimi dönemindeki toplumsal eşitsizlikleri ele alan eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 0, 6) { Title = "Hayvan Çiftliği", Description = "George Orwell'in, hayvanlar tarafından yönetilen bir çiftlikteki diktatörlük ve devrim sürecini ele aldığı romanı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
 
-            books.Append(new(i++, 0, 0)
-            { // Novel - Fyodor Dostoyevski
-                Title = "Fyodor Dostoyevski",
-                Description = "Fyodor Dostoyevski'nin başyapıtı olan Suç ve Ceza, bir insanın suçlu olma, vicdan azabı çekme, suçun karşısındaki adalet arayışını anlatan bir romandır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
+            // **Tarih** (GenreId: 1)
+            books.Append(new(i++, 1, 7) { Title = "Nutuk", Description = "Mustafa Kemal Atatürk'ün Türkiye Cumhuriyeti'nin kurulduğu dönemdeki konuşmalarını içeren eser.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 1, 8) { Title = "Tarihimiz ve Kahramanlarımız", Description = "İlber Ortaylı'nın Türk tarihi üzerine kaleme aldığı önemli eserlerinden biri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 1, 9) { Title = "Selçuklu Tarihi", Description = "Osman Turan'ın, Selçuklu Devleti'nin tarihine dair kapsamlı bir bakış sunduğu eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 1, 10) { Title = "Bir Devrin Perde Arkası", Description = "Falih Rıfkı Atay'ın, Türk Kurtuluş Savaşı'nın perde arkasına dair yazdığı önemli eser.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 1, 11) { Title = "Osmanlı İmparatorluğu’nun Kısa Tarihi", Description = "İnalcık Halil'in, Osmanlı İmparatorluğu'nun kuruluşundan çöküşüne kadar geçirdiği süreçleri incelediği önemli eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 1, 12) { Title = "Türkiye’nin Yakın Tarihi", Description = "Sina Akşin'in, yakın dönemdeki Türk tarihi üzerine yazdığı derinlemesine eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 1, 13) { Title = "Tarih Notları", Description = "İlber Ortaylı'nın, tarihsel olaylara dair görüş ve değerlendirmelerini içeren eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
 
-            books.Append(new(i++, 0, 1)
-            { // Novel - George Orwell
-                Title = "George Orwell",
-                Description = "George Orwell'in distopik eseri 1984, totaliter bir rejimde bireyin özgürlüğü üzerine yazılmış bir uyarıdır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
+            // **Felsefe** (GenreId: 2)
+            books.Append(new(i++, 2, 14) { Title = "İnsan Olmak", Description = "Engin Geçtan'ın, insan psikolojisi üzerine yazdığı temel eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 2, 15) { Title = "Bilinçaltının Gücü", Description = "Joseph Murphy'nin, bilinçaltının gücünü ve potansiyelini keşfetmeye yönelik önemli eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 2, 16) { Title = "Duygusal Zeka", Description = "Daniel Goleman'ın, duygusal zekanın birey ve toplum üzerindeki etkilerini incelediği eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 2, 17) { Title = "Kendine Ait Bir Oda", Description = "Virginia Woolf'un, kadınların özgürlüklerini kazanabilmesi için gereken alanı tartıştığı önemli eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 2, 18) { Title = "Sınırlarını Aşmak", Description = "David J. Lieberman'ın, kişisel engelleri aşmaya yönelik stratejiler sunduğu eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 2, 19) { Title = "İyi Hissetmek", Description = "David Burns'in, depresyon ve kaygı ile başa çıkmaya yönelik psikolojik rehber kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 2, 20) { Title = "Sevme Sanatı", Description = "Erich Fromm'un, sevgi ve insan ilişkilerini anlamaya yönelik felsefi bir bakış sunduğu eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
 
-            books.Append(new(i++, 0, 2)
-            { // Novel - Antoine de Saint-Exupéry
-                Title = "Antoine de Saint-Exupéry",
-                Description = "Antoine de Saint-Exupéry'nin modern bir masalı olan Küçük Prens, insanları anlamak ve yaşamı sorgulamak üzerine derin bir öğreti sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
+            // **Biyografi** (GenreId: 3)
+            books.Append(new(i++, 3, 21) { Title = "Atatürk", Description = "Şevket Süreyya Aydemir'in, Mustafa Kemal Atatürk'ün hayatını ve mücadelesini anlattığı biyografi.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 3, 22) { Title = "Steve Jobs", Description = "Walter Isaacson'un, Apple kurucusu Steve Jobs'un hayatını ve başarılarını konu alan biyografisi.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 3, 23) { Title = "Einstein: Yaşamı ve Düşünceleri", Description = "Walter Isaacson'un, ünlü bilim insanı Albert Einstein'ın hayatı ve bilimsel katkılarını anlatan biyografi.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 3, 24) { Title = "Kendine Ait Bir Oda", Description = "Virginia Woolf'un, kadınların özgürlüklerini kazanabilmesi için gereken alanı tartıştığı biyografisi.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 3, 25) { Title = "Yalnızım Çünkü Sen Varsın", Description = "Hakan Günday'ın, bireysel yalnızlık üzerine yazdığı ve insanın içsel yolculuğunu anlatan bir biyografi.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 3, 26) { Title = "Anne Frank: Günlük", Description = "Anne Frank'in, Nazi işgali altındaki Amsterdam'da yazdığı ünlü günlüğü.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 3, 27) { Title = "Socrates: Aydınlanma", Description = "Plato'nun, eski Yunan filozoflarından Sokrat'ın hayatına dair yazdığı eser.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
 
-            books.Append(new(i++, 0, 3)
-            { // Novel - J.K. Rowling
-                Title = "J.K. Rowling",
-                Description = "J.K. Rowling'in ünlü serisinin ilk kitabı, Harry Potter'ın sihirli dünyasına ilk adımını attığı hikayeyi anlatır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
+            // **Kişisel Gelişim** (GenreId: 4)
+            books.Append(new(i++, 4, 23) { Title = "Atomik Alışkanlıklar", Description = "James Clear'ın, küçük alışkanlıkların büyük değişimlere nasıl yol açtığını anlattığı kişisel gelişim kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 4, 24) { Title = "Düşün ve Zengin Ol", Description = "Napoleon Hill'in, başarı ve zenginlik üzerine yazdığı klasik kişisel gelişim kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 4, 25) { Title = "Alışkanlıkların Gücü", Description = "Charles Duhigg'in, alışkanlıkların insanlar üzerindeki güçlü etkisini keşfettiği kişisel gelişim kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 4, 26) { Title = "Akış: Mutluluk Bilimi", Description = "Mihaly Csikszentmihalyi'nin, akış durumu ve mutluluk üzerine yazdığı çalışması.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 4, 27) { Title = "Etkili İnsanların 7 Alışkanlığı", Description = "Stephen R. Covey'in, başarılı ve etkili insanların uyguladığı alışkanlıklar üzerine yazdığı popüler kişisel gelişim kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 4, 28) { Title = "Başarı İlkeleri", Description = "Jack Canfield'in, başarıya ulaşmak için izlenmesi gereken temel ilkeleri ele aldığı kişisel gelişim kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 4, 29) { Title = "Sınırsız Güç", Description = "Tony Robbins'in, insanların kendi potansiyellerini keşfetmesi için yazdığı kişisel gelişim kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
 
-            books.Append(new(i++, 0, 4)
-            { // Novel - Paulo Coelho
-                Title = "Paulo Coelho",
-                Description = "Paulo Coelho'nun Simyacı adlı eseri, kendi kişisel efsanesini takip etmek ve hayallerinin peşinden gitmek üzerine bir yolculuğu anlatır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
+            // **Sosyoloji** (GenreId: 5)
+            books.Append(new(i++, 5, 32) { Title = "Sosyolojiye Giriş", Description = "Anthony Giddens'ın, sosyolojinin temel kavramlarını ve sosyal yapıları incelediği eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 5, 33) { Title = "Toplum ve İnsanın Doğası", Description = "Emile Durkheim'in, toplumsal yapılar ve birey arasındaki ilişkiyi ele aldığı eser.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 5, 34) { Title = "Sosyal Psikoloji", Description = "David Myers'ın, bireylerin toplum içindeki davranışlarını ve sosyal etkileşimleri incelediği kitabı.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 5, 35) { Title = "Sosyal Sınıflar", Description = "Max Weber'in, toplumsal sınıf yapılarının etkilerini incelediği önemli sosyolojik çalışması.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 5, 36) { Title = "Sosyolojik Düşünme", Description = "Harold D. Lasswell'in, sosyolojik düşünme tarzını tanımlayan ve toplumu analiz etme yöntemlerini ele alan eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 5, 37) { Title = "Toplumun Anatomisi", Description = "Emile Durkheim'in toplumsal yapıları analiz etmek için kullandığı teorileri ele aldığı önemli bir eser.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 5, 38) { Title = "Modern Toplum ve Değişim", Description = "Anthony Giddens'in, modern toplumu ve toplumsal değişimleri ele aldığı sosyolojik çalışması.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
 
-            books.Append(new(i++, 0, 5)
-            { // Novel - Victor Hugo
-                Title = "Victor Hugo",
-                Description = "Victor Hugo'nun Sefiller adlı eseri, Fransız devrimi sonrası toplumsal eşitsizliği ve insan haklarını sorgulayan bir başyapıttır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 0, 1)
-            { // Novel - George Orwell
-                Title = "George Orwell",
-                Description = "George Orwell'in yazdığı Hayvan Çiftliği, totaliter yönetimlerin ve diktatörlüğün eleştirisini yapan bir alegorik eserdir.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 6)
-            { // History - Mustafa Kemal Atatürk
-                Title = "Mustafa Kemal Atatürk",
-                Description = "Mustafa Kemal Atatürk tarafından yazılan Nutuk, Türk Kurtuluş Savaşı ve Cumhuriyetin kuruluşuna dair tarihi bir belgedir.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 7)
-            { // History - İlber Ortaylı
-                Title = "İlber Ortaylı",
-                Description = "İlber Ortaylı'nın Türk tarihi üzerine yazdığı bu eser, Türk milletinin kahramanlık tarihine ışık tutar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 8)
-            { // History - Osman Turan
-                Title = "Osman Turan",
-                Description = "Osman Turan'ın Selçuklu İmparatorluğu hakkında yazdığı eserde, Selçuklu Devleti'nin tarihi detaylı bir şekilde ele alınır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 9)
-            { // History - Falih Rıfkı Atay
-                Title = "Falih Rıfkı Atay",
-                Description = "Falih Rıfkı Atay'ın kaleme aldığı bu eser, Türk milletinin bağımsızlık mücadelesinin perde arkasını anlatan bir belgedir.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 10)
-            { // History - İnalcık Halil
-                Title = "İnalcık Halil",
-                Description = "İnalcık Halil'in Osmanlı İmparatorluğu hakkında yazdığı bu eser, Osmanlı'nın kuruluşundan sona ermesine kadar olan süreci kapsamaktadır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 11)
-            { // History - Sina Akşin
-                Title = "Sina Akşin",
-                Description = "Sina Akşin'in yazdığı Türkiye’nin Yakın Tarihi, Cumhuriyetin ilk yıllarından günümüze kadar olan gelişmeleri anlatır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 1, 7)
-            { // History - İlber Ortaylı
-                Title = "İlber Ortaylı",
-                Description = "İlber Ortaylı'nın Tarih Notları, tarihsel olaylara dair kişisel yorumlarını ve analitik bakış açısını sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 12)
-            { // Philosophy - Engin Geçtan
-                Title = "Engin Geçtan",
-                Description = "Engin Geçtan'ın İnsan Olmak adlı eseri, insan psikolojisini derinlemesine inceleyerek insanın varoluşsal sorgulamalarına ışık tutar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 13)
-            { // Philosophy - Joseph Murphy
-                Title = "Joseph Murphy",
-                Description = "Joseph Murphy'nin Bilinçaltının Gücü adlı eseri, insanın bilinçaltını kullanarak yaşamını nasıl değiştirebileceğini anlatır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 14)
-            { // Philosophy - Daniel Goleman
-                Title = "Daniel Goleman",
-                Description = "Daniel Goleman'ın Duygusal Zeka adlı kitabı, insanların duygusal zekalarını geliştirmeleri ve bu zekayı günlük yaşamlarına nasıl entegre edebilecekleri üzerine bilgiler sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 15)
-            { // Philosophy - Virginia Woolf
-                Title = "Virginia Woolf",
-                Description = "Virginia Woolf'un Kendine Ait Bir Oda adlı eseri, kadınların yaratıcı olabilmesi için özgürlüğe ve kendi odalarına sahip olmalarının gerekliliğini vurgular.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 16)
-            { // Philosophy - David J. Lieberman
-                Title = "David J. Lieberman",
-                Description = "David J. Lieberman'ın Sınırlarını Aşmak adlı kitabı, insanın kendi potansiyelini keşfetmesi ve sınırlarını aşabilmesi için pratik öneriler sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 17)
-            { // Philosophy - David Burns
-                Title = "David Burns",
-                Description = "David Burns'in İyi Hissetmek adlı kitabı, depresyonla mücadele eden kişilere yardımcı olabilecek pratik teknikler ve stratejiler sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 2, 18)
-            { // Philosophy - Erich Fromm
-                Title = "Erich Fromm",
-                Description = "Erich Fromm'un Sevme Sanatı adlı eseri, sevginin insan doğası üzerindeki derin etkilerini ve sağlıklı bir sevginin nasıl olabileceğini inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 19)
-            { // Biography - Şevket Süreyya Aydemir
-                Title = "Şevket Süreyya Aydemir",
-                Description = "Şevket Süreyya Aydemir'in Atatürk adlı eseri, Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün hayatını ve düşüncelerini detaylı bir şekilde ele alır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 20)
-            { // Biography - Walter Isaacson
-                Title = "Walter Isaacson",
-                Description = "Walter Isaacson'ın Steve Jobs biyografisi, Apple'ın kurucusu Steve Jobs'un hayatını, iş hayatını ve vizyonunu ele alır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 21)
-            { // Biography - Walter Isaacson
-                Title = "Walter Isaacson",
-                Description = "Walter Isaacson'ın Einstein: Yaşamı ve Düşünceleri adlı eseri, Albert Einstein'ın yaşamına dair kapsamlı bir biyografi sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 15)
-            { // Biography - Virginia Woolf
-                Title = "Virginia Woolf",
-                Description = "Virginia Woolf'un Kendine Ait Bir Oda adlı eseri, kadınların yaratıcı olabilmesi için özgürlüğe ve kendi odalarına sahip olmalarının gerekliliğini vurgular.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 22)
-            { // Biography - Hakan Günday
-                Title = "Hakan Günday",
-                Description = "Hakan Günday'ın Yalnızım Çünkü Sen Varsın adlı eseri, modern insanın yalnızlıkla ve kendi iç dünyasıyla mücadelesini anlatır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 23)
-            { // Biography - Ece Temelkuran
-                Title = "Ece Temelkuran",
-                Description = "Ece Temelkuran'ın Büyük Usta: Nazım Hikmet adlı eseri, Türk edebiyatının en önemli şairlerinden Nazım Hikmet'in yaşamına ve edebiyatına dair bir biyografi sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 3, 24)
-            { // Biography - Albert Einstein
-                Title = "Albert Einstein",
-                Description = "Albert Einstein'in Aydınlanma ve Sonsuzluk adlı eseri, bilimsel düşünceye dair kişisel görüşlerini ve felsefi bakış açılarını sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 25)
-            { // Personal development - James Clear
-                Title = "James Clear",
-                Description = "James Clear'in Atomik Alışkanlıklar adlı eseri, kişisel gelişim için küçük alışkanlıkların gücünü anlatır ve hedeflere ulaşmanın pratik yollarını sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 26)
-            { // Personal development - Napoleon Hill
-                Title = "Napoleon Hill",
-                Description = "Napoleon Hill'in Düşün ve Zengin Ol adlı eseri, kişisel başarıya ulaşmak için gereken zihinsel tutumları ve stratejileri detaylandırır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 27)
-            { // Personal development - Charles Duhigg
-                Title = "Charles Duhigg",
-                Description = "Charles Duhigg'in Alışkanlıkların Gücü adlı kitabı, alışkanlıkların bilimsel temellerini ve bunların kişisel gelişim üzerindeki etkilerini inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 28)
-            { // Personal development - Mihaly Csikszentmihalyi
-                Title = "Mihaly Csikszentmihalyi",
-                Description = "Mihaly Csikszentmihalyi'nin Akış: Mutluluk Bilimi adlı eseri, insanın tam anlamıyla kendini kaybettiği anları ve bunların mutluluk üzerindeki etkilerini keşfeder.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 29)
-            { // Personal development - Stephen R. Covey
-                Title = "Stephen R. Covey",
-                Description = "Stephen R. Covey'in Etkili İnsanların 7 Alışkanlığı adlı eseri, kişisel gelişim ve liderlik üzerine önemli stratejiler sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 30)
-            { // Personal development - Jack Canfield
-                Title = "Jack Canfield",
-                Description = "Jack Canfield'in Başarı İlkeleri adlı eseri, kişisel başarıya ulaşmak için izlenmesi gereken yol haritasını sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 4, 31)
-            { // Personal development - Tony Robbins
-                Title = "Tony Robbins",
-                Description = "Tony Robbins'in Sınırsız Güç adlı eseri, kişisel gücün nasıl keşfedileceğini ve hayatın her alanında nasıl daha başarılı olunabileceğini anlatır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 32)
-            { // Sociology - Anthony Giddens
-                Title = "Anthony Giddens",
-                Description = "Anthony Giddens'in Toplumların Yapısı adlı eseri, toplumsal yapıların nasıl şekillendiğini ve bireylerin toplum içerisindeki rolünü tartışır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 33)
-            { // Sociology - C. Wright Mills
-                Title = "C. Wright Mills",
-                Description = "C. Wright Mills'in Sosyolojik Düşünce adlı eseri, sosyolojik düşüncenin temel ilkelerini ve toplumsal olayları ele alma yöntemlerini inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 34)
-            { // Sociology - Emile Durkheim
-                Title = "Emile Durkheim",
-                Description = "Emile Durkheim'in Sosyolojinin Temelleri adlı eseri, sosyoloji biliminin kurucularından birinin bakış açısını yansıtarak, toplumsal yapıları ve kurumları inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 35)
-            { // Sociology - John J. Macionis
-                Title = "John J. Macionis",
-                Description = "John J. Macionis'in Sosyolojiye Giriş adlı eseri, sosyolojinin temel kavramlarını ve kuramlarını anlamaya yönelik bir rehber sunar.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 36)
-            { // Sociology - Zygmunt Bauman
-                Title = "Zygmunt Bauman",
-                Description = "Zygmunt Bauman'ın Sosyoloji ve İnsan Doğası adlı eseri, modern toplumlardaki hızlı değişimlerin bireyler üzerindeki etkilerini inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 37)
-            { // Sociology - Ulrich Beck
-                Title = "Ulrich Beck",
-                Description = "Ulrich Beck'in Toplumda Değişim adlı eseri, modern toplumların karşı karşıya kaldığı tehlikeler ve bu tehlikelerin toplumsal yapılar üzerindeki etkilerini inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 5, 38)
-            { // Sociology - Max Weber
-                Title = "Max Weber",
-                Description = "Max Weber'in Kapitalizm ve Toplum adlı eseri, kapitalizmin toplumsal yapı üzerindeki etkilerini ve toplumsal davranışları nasıl şekillendirdiğini tartışır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 39)
-            { // Politics - Gabriel Almond
-                Title = "Gabriel Almond",
-                Description = "Gabriel Almond'un Siyaset Bilimine Giriş adlı eseri, siyaset biliminin temel kavramlarını ve teorilerini ele alır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 40)
-            { // Politics - Juan J. Linz
-                Title = "Juan J. Linz",
-                Description = "Juan J. Linz'in Demokrasi ve Otoriterizm adlı eseri, demokrasi ile otoriterizm arasındaki farkları ve bu iki yönetim biçiminin toplumsal etkilerini tartışır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 41)
-            { // Politics - Bertrand Russell
-                Title = "Bertrand Russell",
-                Description = "Bertrand Russell'in Siyasi Düşünceler Tarihi adlı eseri, siyaset felsefesinin tarihsel gelişimini ve önemli düşünürleri ele alır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 13)
-            { // Politics - George Orwell
-                Title = "George Orwell",
-                Description = "George Orwell'in Çiftlikteki Devrim (Hayvan Çiftliği) adlı eseri, totaliter yönetimlerin eleştirisi ve toplumun köleleşmesini anlatan bir alegoridir.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 42)
-            { // Politics - John Locke
-                Title = "John Locke",
-                Description = "John Locke'un Siyaset Üzerine adlı eseri, hükümetin meşruiyetinin ve bireysel özgürlüklerin temellerini tartışır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 43)
-            { // Politics - Thomas Hobbes
-                Title = "Thomas Hobbes",
-                Description = "Thomas Hobbes'un Siyasi Felsefe adlı eseri, devletin ve toplumsal sözleşmenin doğasını ele alır.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
-
-            books.Append(new(i++, 6, 44)
-            { // Politics - William Shirer
-                Title = "William Shirer",
-                Description = "William Shirer'in Diktatörlüğün Yükselişi adlı eseri, Nazi Almanyası'ndaki diktatörlük yönetimini ve bunun toplumsal etkilerini inceler.",
-                Rating = random.Next(5, 11),
-                StockCount = random.Next(0, 1001)
-            });
+            // **Politika** (GenreId: 6)
+            books.Append(new(i++, 6, 39) { Title = "Siyaset Bilimine Giriş", Description = "John J. Mearsheimer'in, siyaset biliminin temel ilkelerini ve uluslararası ilişkiler teorilerini açıklayan eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 6, 40) { Title = "Demokrasi ve Totalitarizm", Description = "Karl Popper'ın, demokrasi ve totaliter rejimler arasındaki farkları ve her birinin toplumsal etkilerini incelediği çalışması.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 6, 41) { Title = "Toplum ve Devlet", Description = "Jean-Jacques Rousseau'nun, devletin doğasını ve toplumun birey üzerindeki etkilerini tartıştığı eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 6, 42) { Title = "Hegemonya ve İktidar", Description = "Antonio Gramsci'nin, hegemonyanın toplumdaki rolü ve iktidar ilişkilerini ele alan önemli eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 6, 43) { Title = "Çatışma ve Toplum", Description = "Ralf Dahrendorf'un, toplum içindeki sınıf çatışmalarını ve bunların toplumsal düzen üzerindeki etkilerini incelediği eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 6, 44) { Title = "Politik Ekonomi", Description = "Karl Marx'ın, ekonomi ve politika arasındaki ilişkiyi açıklamak için geliştirdiği teorileri içeren eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
+            books.Append(new(i++, 6, 45) { Title = "Uluslararası İlişkiler", Description = "Kenneth Waltz'un, uluslararası ilişkiler teorileri üzerine yazdığı önemli eseri.", Rating = random.Next(5, 11), StockCount = random.Next(0, 1001) });
         }
     }
 }
