@@ -16,6 +16,9 @@ namespace muhammedkayraozkaya_241103046.Datas
             DataSample.AppGenres(genres);
             DataSample.AppAuthors(authors);
             DataSample.AppBooks(books);
+
+            authors.Shuffle();
+            books.Shuffle();
         }
     }
 }
