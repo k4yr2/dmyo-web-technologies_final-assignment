@@ -15,10 +15,5 @@ namespace muhammedkayraozkaya_241103046.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
     }
 }
