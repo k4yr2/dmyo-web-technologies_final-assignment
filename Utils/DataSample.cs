@@ -53,7 +53,7 @@ namespace muhammedkayraozkaya_241103046.Utils
 
             authors.Append(new(i++,
                 new AuthorName() { First = "Mustafa Kemal", Last = "Atatürk", Nick = "Atatürk" },
-                new AuthorDate() { Birth = new DateTime(1881, 1, 1), Death = new DateTime(1938, 11, 10) }));
+                new AuthorDate() { Birth = new DateTime(1881, 5, 19), Death = new DateTime(1938, 11, 10) }));
 
             authors.Append(new(i++,
                 new AuthorName() { First = "İlber", Last = "Ortaylı", Nick = null },
