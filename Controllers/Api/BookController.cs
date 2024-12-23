@@ -4,19 +4,19 @@ using muhammedkayraozkaya_241103046.Models;
 
 namespace muhammedkayraozkaya_241103046.Controllers.Api
 {
-    [ApiController, Route("api/[controller]")]
-    public class AuthorsController : Controller
+    [ApiController, Route("api/books")]
+    public class BookController : Controller
     {
         [HttpGet]
-        public IActionResult Authors()
+        public IActionResult Books()
         {
-            return Ok(DataStore.authors.Models); // JSON olarak döndür
+            return Ok(DataStore.books.Models); // JSON olarak döndür
         }
 
         [HttpGet("{id}")]
-        public IActionResult Author(int id)
+        public IActionResult Book(int id)
         {
-            if (DataStore.authors.Model(id, out AuthorModel? model))
+            if (DataStore.books.Model(id, out BookModel? model))
                 return Ok(model);
 
             return BadRequest();
