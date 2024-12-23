@@ -12,5 +12,14 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
         {
             return Ok(DataStore.authors.Models); // JSON olarak döndür
         }
+
+        [HttpGet("{id}")]
+        public IActionResult Author(int id)
+        {
+            if (DataStore.authors.Model(id, out AuthorModel? model))
+                return Ok(model);
+
+            return BadRequest();
+        }
     }
 }

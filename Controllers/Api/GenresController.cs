@@ -12,5 +12,14 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
         {
             return Ok(DataStore.genres.Models); // JSON olarak döndür
         }
+
+        [HttpGet("{id}")]
+        public IActionResult Genre(int id)
+        {
+            if (DataStore.genres.Model(id, out GenreModel? model))
+                return Ok(model);
+
+            return BadRequest();
+        }
     }
 }
