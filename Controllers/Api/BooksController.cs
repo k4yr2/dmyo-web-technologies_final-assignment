@@ -8,7 +8,7 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
     public class BooksController : Controller
     {
         [HttpGet]
-        public IActionResult GetAllBooks()
+        public IActionResult Books()
         {
             return Ok(DataStore.books.Models); // JSON olarak döndür
         }

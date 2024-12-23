@@ -8,7 +8,7 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
     public class AuthorsController : Controller
     {
         [HttpGet]
-        public IActionResult GetAllAuthors()
+        public IActionResult Authors()
         {
             return Ok(DataStore.authors.Models); // JSON olarak döndür
         }

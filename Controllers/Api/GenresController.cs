@@ -8,7 +8,7 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
     public class GenresController : Controller
     {
         [HttpGet]
-        public IActionResult GetAllGenres()
+        public IActionResult Genres()
         {
             return Ok(DataStore.genres.Models); // JSON olarak döndür
         }
