@@ -41,5 +41,20 @@ namespace muhammedkayraozkaya_241103046.Datas
         {
             return cache.Remove(id, out model);
         }
+
+        /// <summary>
+        /// Shuffle all elements in the pool
+        /// </summary>
+        public void Shuffle()
+        {
+            TModel[] models = Models.ToArray();
+            cache.Clear();
+
+            Random rng = new();
+            TModel[] shuffled = [..models.OrderBy(c => rng.Next(models.Length * 10))];
+
+            foreach (var item in shuffled)
+                cache.Add(item.Id, item);
+        }
     }
 }
