@@ -10,7 +10,7 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
         [HttpGet]
         public IActionResult Books()
         {
-            return Ok(DataStore.books.Models); // JSON olarak döndür
+            return Ok(DataStore.books.Models);
         }
 
         [HttpGet("{id}")]
