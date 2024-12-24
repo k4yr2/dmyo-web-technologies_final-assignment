@@ -17,6 +17,15 @@ namespace muhammedkayraozkaya_241103046.Datas
         }
 
         /// <summary>
+        /// Has model with specified id
+        /// </summary>
+        public bool Has(int id, out TModel? model)
+        {
+            model = Model(id);
+            return model != null;
+        }
+
+        /// <summary>
         /// Remove specified id
         /// </summary> 
         public bool Remove(int id, out TModel? model)
