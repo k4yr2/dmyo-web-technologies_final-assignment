@@ -37,7 +37,7 @@
 
         public double Discounted()
         {
-            return Cost * (Discount/100);
+            return Cost - (Cost * (Discount/100));
         }
     }
 }
