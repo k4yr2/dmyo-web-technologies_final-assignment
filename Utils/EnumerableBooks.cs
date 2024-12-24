@@ -17,7 +17,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderByDescending(b => b.Details.Rating);
+                return All.OrderByDescending(b => b.Rating);
             }
         }
 
@@ -25,7 +25,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderBy(b => b.Details.Rating);
+                return All.OrderBy(b => b.Rating);
             }
         }
 
@@ -33,7 +33,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderByDescending(b => b.Details.Stocks);
+                return All.OrderByDescending(b => b.Stocks);
             }
         }
 
@@ -41,7 +41,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderBy(b => b.Details.Stocks);
+                return All.OrderBy(b => b.Stocks);
             }
         }
 
@@ -49,7 +49,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderByDescending(b => b.Price.Cost);
+                return All.OrderByDescending(b => b.Cost);
             }
         }
 
@@ -57,7 +57,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderBy(b => b.Price.Cost);
+                return All.OrderBy(b => b.Cost);
             }
         }
 
@@ -65,7 +65,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderByDescending(b => b.Price.Discount);
+                return All.OrderByDescending(b => b.Discount);
             }
         }
 
@@ -73,23 +73,23 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderBy(b => b.Price.Discount);
+                return All.OrderBy(b => b.Discount);
             }
         }
 
-        static public IEnumerable<BookModel> MostDiscounted
+        static public IEnumerable<BookModel> MostPrice
         {
             get
             {
-                return All.OrderByDescending(b => b.Price.Discounted());
+                return All.OrderByDescending(b => b.Price());
             }
         }
 
-        static public IEnumerable<BookModel> LestDiscounted
+        static public IEnumerable<BookModel> LestPrice
         {
             get
             {
-                return All.OrderBy(b => b.Price.Discounted());
+                return All.OrderBy(b => b.Price());
             }
         }
     }
