@@ -32,5 +32,10 @@
         public double Cost { get; set; }
 
         public double Discount { get; set; }
+
+        public double Discounted()
+        {
+            return Cost * (Discount/100);
+        }
     }
 }
