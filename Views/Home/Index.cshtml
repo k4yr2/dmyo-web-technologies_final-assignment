@@ -3,13 +3,33 @@
 }
 
 <div class="books">
+
     @foreach (var book in EnumerableBooks.MostRating.Take(5))
     {
         <div class="book">
-            <h4>@book.Title</h4>
-            <p>@book.Description</p>
-            <p>@book.Rating.ToString("F1")</p>
-            <p>@book.StockCount</p>
+            <h4>@book.Content.Title</h4>
+            <img src="img/covers/@(book.Id).jpg"></img>
+            <p>@book.Details.Rating.ToString("F1")</p>
+            <p>@book.Details.Stocks</p>
+            <p>@book.Price.Cost</p>
+            <p>@book.Price.Discount</p>
+            <p>@book.Price.Discounted()</p>
         </div>
+    }
+</div>
+
+<div class="books">
+
+    @foreach (var book in EnumerableBooks.MostRating.Take(5))
+    {
+            <div class="book">
+                <h4>@book.Content.Title</h4>
+                <img src="img/covers/@(book.Id).jpg"></img>
+                <p>@book.Details.Rating.ToString("F1")</p>
+                <p>@book.Details.Stocks</p>
+                <p>@book.Price.Cost</p>
+                <p>@book.Price.Discount</p>
+                <p>@book.Price.Discounted()</p>
+            </div>
     }
 </div>

@@ -17,7 +17,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderByDescending(b => b.Rating);
+                return All.OrderByDescending(b => b.Details.Rating);
             }
         }
 
@@ -25,7 +25,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return All.OrderBy(b => b.Rating);
+                return All.OrderBy(b => b.Details.Rating);
             }
         }
     }
