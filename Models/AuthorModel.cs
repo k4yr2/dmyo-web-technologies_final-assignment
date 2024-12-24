@@ -1,12 +1,36 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Collections.Generic;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace muhammedkayraozkaya_241103046.Models
 {
-    public class AuthorModel(int id, AuthorName name, AuthorDate date) : BaseModel(id)
+    public class AuthorModel(int id) : BaseModel(id)
     {
-        public AuthorName Name { get; } = name;
+        public string? FirstName { get; set; }
 
-        public AuthorDate Date { get; } = date;
+        public string? LastName { get; set; }
+
+        public DateTime? BirthDate { get; set; }
+
+        public DateTime? DeathDate { get; set; }
+
+        public string? FullName()
+        {
+            var flag = FirstName == null;
+            var flag2 = LastName == null;
+
+            if (flag)
+            {
+                if (flag2)
+                    return null;
+
+                return LastName;
+            }
+
+            if (flag2)
+                return FirstName;
+
+            return $"{FirstName} {LastName}";
+        }
 
         public int? GetAge()
         {
@@ -31,41 +55,5 @@ namespace muhammedkayraozkaya_241103046.Models
 
             return age;
         }
-    }
-
-    public class AuthorName
-    {
-        public string? First { get; set; }
-
-        public string? Last { get; set; }
-
-        public string? Nick { get; set; }
-
-
-        public string? GetFull()
-        {
-            var flag = First == null;
-            var flag2 = Last == null;
-
-            if (flag)
-            {
-                if (flag2)
-                    return null;
-
-                return Last;
-            }
-
-            if (flag2)
-                return First;
-
-            return $"{First} {Last}";
-        }
-    }
-
-    public class AuthorDate
-    {
-        public DateTime? Birth { get; set; }
-
-        public DateTime? Death { get; set; }
     }
 }
