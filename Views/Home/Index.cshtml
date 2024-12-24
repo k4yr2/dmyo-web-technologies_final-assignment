@@ -8,7 +8,7 @@
     {
         <div class="book">
             <h4>@book.Content.Title</h4>
-            <img src="img/covers/@(book.Id).jpg"></img>
+            <img src="img/covers/@book.ImgStr()"></img>
             <p>@book.Details.Rating.ToString("F1")</p>
             <p>@book.Details.Stocks</p>
             <p>@book.Price.Cost</p>

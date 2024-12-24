@@ -11,6 +11,8 @@
         public BookDetails Details { get; } = details ?? new();
 
         public BookPrice Price { get; } = price ?? new();
+
+        public string ImgStr() => $"{Id:D2}.jpg";
     }
 
     public class BookContent
