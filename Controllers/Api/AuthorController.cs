@@ -10,13 +10,13 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
         [HttpGet]
         public IActionResult Books()
         {
-            return Ok(DataStore.authors.Models);
+            return Ok(DataStore.authors.Models());
         }
 
         [HttpGet("{id}")]
         public IActionResult Book(int id)
         {
-            if (DataStore.authors.Model(id, out AuthorModel? model))
+            if (DataStore.authors.Has(id, out AuthorModel? model))
                 return Ok(model);
 
             return BadRequest();

@@ -10,13 +10,13 @@ namespace muhammedkayraozkaya_241103046.Controllers.Api
         [HttpGet]
         public IActionResult Genres()
         {
-            return Ok(DataStore.genres.Models);
+            return Ok(DataStore.genres.Models());
         }
 
         [HttpGet("{id}")]
         public IActionResult Genre(int id)
         {
-            if (DataStore.genres.Model(id, out GenreModel? model))
+            if (DataStore.genres.Has(id, out GenreModel? model))
                 return Ok(model);
 
             return BadRequest();
