@@ -56,7 +56,7 @@ namespace muhammedkayraozkaya_241103046.Datas
         /// </summary>
         public void Shuffle()
         {
-            TModel[] models = Models.ToArray();
+            TModel[] models = Models().ToArray();
             cache.Clear();
 
             Random rng = new();
