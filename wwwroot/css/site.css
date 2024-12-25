@@ -1,30 +1,21 @@
-html {
-  font-size: 14px;
+.book-section {
+    border: 1px solid;
+    margin: 20px;
+    padding: 10px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.book-container {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.book-card {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    padding: 10px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
-
-.books {
-    display: flex
-}
-
-.book {
-    flex : 1
+.book-card img{
+    height: 300px;
 }
