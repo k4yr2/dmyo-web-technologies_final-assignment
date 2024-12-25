@@ -1,11 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var mostDiscount = new BookSection("Kaçmaz fırsatlar", EnumerableBooks.MostDiscount, 4);
+    var mostRating = new BookSection("En sevilenler", EnumerableBooks.MostRating, 4);
+    var lessStocks = new BookSection("Tükenmeden alın", EnumerableBooks.LestStocks, 4);
 }
 
-<div class="books">
-    <partial name="BookContainer/Default" model=@EnumerableBooks.MostRating.Take(5)/>
-</div>
-
-<div class="books">
-    <partial name="BookContainer/Default" model=@EnumerableBooks.LestDiscount.Take(5)/>
+<div>
+    <partial name="BookSection/Default" model=@mostDiscount/>
+    <partial name="BookSection/Default" model=@mostRating/>
+    <partial name="BookSection/Default" model=@lessStocks/>
 </div>
