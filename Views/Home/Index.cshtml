@@ -3,17 +3,9 @@
 }
 
 <div class="books">
-
-    @foreach (var book in EnumerableBooks.MostRating.Take(5))
-    {
-        <partial name="BookCard/default" model=@book/>
-    }
+    <partial name="BookContainer/Default" model=@EnumerableBooks.MostRating.Take(5)/>
 </div>
 
 <div class="books">
-
-    @foreach (var book in EnumerableBooks.MostRating.Take(5))
-    {
-        <partial name="BookCard/default" model=@book/>
-    }
+    <partial name="BookContainer/Default" model=@EnumerableBooks.LestDiscount.Take(5)/>
 </div>
