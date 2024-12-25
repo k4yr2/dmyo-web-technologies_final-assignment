@@ -2,6 +2,7 @@
 using muhammedkayraozkaya_241103046.Models;
 using System.Xml.Linq;
 using static System.Reflection.Metadata.BlobBuilder;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace muhammedkayraozkaya_241103046.Utils
 {
@@ -48,10 +49,10 @@ namespace muhammedkayraozkaya_241103046.Utils
         static public void AppBooks(DataList<BookModel> books)
         {
             Random rng = new();
-            double rating() => 1 + rng.NextDouble() * 4;
+            double rating() => Math.Round(1 + rng.NextDouble() * 4, 2);
             int stocks() => rng.Next(1001);
             double cost() => rng.Next(1001);
-            double discount() => rng.NextDouble() * 100;
+            double discount() => Math.Round(rng.NextDouble() * 100, 1);
 
             books.Append(new BookModel(0, 0, 0)
             { 

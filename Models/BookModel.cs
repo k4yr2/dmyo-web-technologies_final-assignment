@@ -26,7 +26,7 @@ namespace muhammedkayraozkaya_241103046.Models
 
         public double Price()
         {
-            return Cost - (Cost * (Discount / 100));
+            return Math.Round(Cost - (Cost * (Discount / 100)), 2);
         }
 
         public string ImgStr() => $"{Id:D2}.jpg";
