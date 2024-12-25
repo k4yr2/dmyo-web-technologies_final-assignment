@@ -1,4 +1,21 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function updateCards() {
+    const containers = document.querySelectorAll('.book-container');
 
-// Write your JavaScript code.
+    containers.forEach((container) => {
+        const cards = container.children;
+        const containerWidth = container.offsetWidth;
+
+        const visibleCount = Math.floor(containerWidth / 240);
+
+        Array.from(cards).forEach((item, index) => {
+            if (index < visibleCount) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+}
+
+window.addEventListener('resize', updateCards);
+window.addEventListener('load', updateCards);
