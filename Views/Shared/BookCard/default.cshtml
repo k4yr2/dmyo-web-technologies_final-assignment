@@ -1,0 +1,7 @@
+﻿@model muhammedkayraozkaya_241103046.Models.BookModel
+
+<div class="book-card">
+    <img src="img/covers/@Model?.ImgStr()" alt="@(Model?.Title ?? "No Cover")" />
+    <p>@(Model?.Title ?? "Untitled")</p>
+    <p>@(Model?.Price())</p>
+</div>
