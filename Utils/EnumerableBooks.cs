@@ -9,7 +9,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         {
             get
             {
-                return DataStore.books.Models;
+                return DataStore.books.Models();
             }
         }
 
