@@ -34,15 +34,15 @@ namespace muhammedkayraozkaya_241103046.Models
 
         public int? GetAge()
         {
-            if (Date.Birth == null)
+            if (BirthDate == null)
             {
                 return null;
             }
 
-            DateTime birth = Date.Birth.Value;
-            DateTime last = Date.Death == null
+            DateTime birth = BirthDate.Value;
+            DateTime last = DeathDate == null
                 ? DateTime.Today
-                : Date.Death.Value;
+                : DeathDate.Value;
 
 
             int age = last.Year - birth.Year;
