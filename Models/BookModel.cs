@@ -1,10 +1,16 @@
-﻿namespace muhammedkayraozkaya_241103046.Models
+﻿using muhammedkayraozkaya_241103046.Datas;
+
+namespace muhammedkayraozkaya_241103046.Models
 {
     public class BookModel(int id, int genre, int author) : BaseModel(id)
     {
         public int GenreId { get; } = genre;
 
+        public GenreModel? Genre { get; } = DataStore.genres.Model(genre);
+
         public int AuthorId { get; } = author;
+
+        public AuthorModel? Author { get; } = DataStore.authors.Model(author);
 
         public string? Title { get; set; }
 
