@@ -1,3 +1,8 @@
 ﻿@model IEnumerable<muhammedkayraozkaya_241103046.Models.BookModel>
+@{
+	var container = new BookContainer(Model, 0);
+}
 
-<partial name="BookContainer/Default" model=@Model />
+<div >
+	<partial name="Book/container" model=@container />
+</div>
