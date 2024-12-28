@@ -49,7 +49,7 @@ namespace muhammedkayraozkaya_241103046.Utils
         static public void AppBooks(DataList<BookModel> books)
         {
             Random rng = new();
-            double rating() => Math.Round(1 + rng.NextDouble() * 4, 2);
+            double rating() => Math.Round(1 + rng.NextDouble() * 4, 1);
             int stocks() => rng.Next(1001);
             double cost() => rng.Next(1001);
             double discount() => Math.Round(rng.NextDouble() * 100, 1);
