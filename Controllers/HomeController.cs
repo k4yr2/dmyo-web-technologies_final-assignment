@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace muhammedkayraozkaya_241103046.Controllers
 {
+    [Route("")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -11,6 +12,7 @@ namespace muhammedkayraozkaya_241103046.Controllers
             _logger = logger;
         }
 
+        [HttpGet, Route("")]
         public IActionResult Index()
         {
             return View();
