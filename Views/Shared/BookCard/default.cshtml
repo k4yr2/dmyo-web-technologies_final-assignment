@@ -1,7 +1,38 @@
 ﻿@model muhammedkayraozkaya_241103046.Models.BookModel
+@{
+    var title = Model?.Title ?? "Untitled";
+    var imgStr = Model?.ImgStr() ?? string.Empty;
+    var rating = Model?.Rating ?? 0;
+    var stocks = Model?.Stocks ?? 0;
+    var price = Model?.Price() ?? 0;
+    var discount = Model?.Discount ?? 0;
+}
 
 <div class="book-card">
-    <img src="img/covers/@Model?.ImgStr()" alt="@(Model?.Title ?? "No Cover")" />
-    <p>@(Model?.Title ?? "Untitled")</p>
-    <p>@(Model?.Price())</p>
+    <div class="book-cover">
+        <a asp-controller="home" asp-action="index">
+            <img src="img/covers/@imgStr" alt="@title" />
+        </a>
+        <div>
+            <p class="stocks">
+                @stocks left
+            </p>
+            <p class="rating">
+                ⭐@rating points
+            </p>
+            <p class="discount">
+                Save %@(discount)           
+            </p>
+            <p class="price">
+                @(price) TL             
+            </p>
+        </div>
+    </div>
+    <div>
+        <p>@title</p>
+        <p>@rating points</p>
+        <p>@stocks left</p>
+        <p>@(Model?.Price())TL</p>
+    </div>
+
 </div>

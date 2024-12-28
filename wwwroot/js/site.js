@@ -5,7 +5,7 @@
         const cards = container.children;
         const containerWidth = container.offsetWidth;
 
-        const visibleCount = Math.floor(containerWidth / 240);
+        const visibleCount = Math.floor(containerWidth / cards[0].offsetWidth);
 
         Array.from(cards).forEach((item, index) => {
             if (index < visibleCount) {
