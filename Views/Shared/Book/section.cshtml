@@ -1,6 +1,10 @@
 ﻿@model muhammedkayraozkaya_241103046.Models.BookSection
 
 <div class="book-section">
-    <h4>@Model.Title</h4>
+    @if (Model.Title != null)
+    {
+        <h4>@Model.Title</h4>
+    }
+
     <partial name="Book/container" model=@Model.Container/>
 </div>

@@ -32,9 +32,9 @@ namespace muhammedkayraozkaya_241103046.Models
         public string ImgStr() => $"{Id:D2}.jpg";
     }
 
-    public class BookSection(string title, IEnumerable<BookModel> source, int count)
+    public class BookSection(string? title, IEnumerable<BookModel> source, int count)
     {
-        public string Title { get; } = title;
+        public string? Title { get; } = title;
 
         public BookContainer Container { get; } = new(source, count);
     }
