@@ -20,11 +20,14 @@
     margin: 20px;
 }
 
+#cl-header a {
+    text-decoration: none;
+}
+
 #cl-header .logo {
     display: flex;
     height: 40px;
     align-items: center;
-    text-decoration: none;
 }
 
 #cl-header .logo .label-close {
