@@ -1,5 +1,5 @@
 ﻿function updateCards() {
-    const containers = document.querySelectorAll('.book-container');
+    const containers = document.querySelectorAll('.book-container.line');
 
     containers.forEach((container) => {
         const cards = container.children;
