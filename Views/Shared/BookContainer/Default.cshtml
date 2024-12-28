@@ -1,8 +1,11 @@
 ﻿@model IEnumerable<muhammedkayraozkaya_241103046.Models.BookModel>
 
 <div class="book-container">
-    @foreach (var item in Model)
+    @if(Model != null)
     {
-        <partial name="BookCard/Default" model=@item/>
+        @foreach (var item in Model)
+        {
+            <partial name="BookCard/Default" model=@item/>
+        }
     }
 </div>
