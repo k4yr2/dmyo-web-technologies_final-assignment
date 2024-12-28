@@ -36,10 +36,15 @@ namespace muhammedkayraozkaya_241103046.Models
     {
         public string Title { get; } = title;
 
-        public IEnumerable<BookModel> Source { get; } = source;
-
-        public int Count { get; } = count;
-
-        public IEnumerable<BookModel> Display => Source.Take(Count);
+        public BookContainer Container { get; } = new(source, count);
     }
+
+    public class BookContainer(IEnumerable<BookModel> source, int count)
+    {
+		public IEnumerable<BookModel> Source { get; } = source;
+
+		public int Count { get; } = count;
+
+		public IEnumerable<BookModel> Display => Count == 0 ? Source : Source.Take(Count);
+	}
 }
