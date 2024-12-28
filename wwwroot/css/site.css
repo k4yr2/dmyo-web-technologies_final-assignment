@@ -13,6 +13,11 @@ body {
 .book-container {
     display: flex;
     overflow: hidden;
-    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-container.line {
+    flex-wrap: nowrap;
     justify-content: space-evenly;
 }
