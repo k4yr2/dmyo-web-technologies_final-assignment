@@ -1,3 +1,45 @@
+#cl-banner {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+}
+
+#cl-banner * {
+    color: white;
+    font-family: monospace;
+    margin-left: 12px;
+    margin-right: 12px;
+    user-select: none;
+}
+
+#cl-header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+#cl-header .logo {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    text-decoration: none;
+}
+
+#cl-header .logo .label-close {
+    font-weight: 400;
+    font-style: italic;
+    margin: 4px;
+    font-size: 28px;
+    color: #00000099;
+}
+
+#cl-header .logo .label-library {
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000ba;
+}
 body {
     background-color: #E1DCC5;
 }
