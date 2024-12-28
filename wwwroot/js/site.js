@@ -17,5 +17,6 @@
     });
 }
 
-window.addEventListener('resize', updateCards);
-window.addEventListener('load', updateCards);
+setInterval(() => {
+    updateCards();
+}, 0);
