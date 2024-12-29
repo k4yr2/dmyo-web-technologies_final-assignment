@@ -47,4 +47,9 @@ namespace muhammedkayraozkaya_241103046.Models
 
 		public IEnumerable<BookModel> Display => Count == 0 ? Source : Source.Take(Count);
 	}
+
+    public class BookCard(BookModel book)
+    {
+        public BookModel Book { get; } = book;
+    }
 }

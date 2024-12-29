@@ -1,37 +1,33 @@
-﻿@model muhammedkayraozkaya_241103046.Models.BookModel
+﻿@model muhammedkayraozkaya_241103046.Models.BookCard
 @{
-    var title = Model?.Title ?? "Untitled";
-    var imgStr = Model?.ImgStr() ?? string.Empty;
-    var rating = Model?.Rating ?? 0;
-    var stocks = Model?.Stocks ?? 0;
-    var price = Model?.Price() ?? 0;
-    var discount = Model?.Discount ?? 0;
+
+    var book = Model?.Book ?? new BookModel(-1, -1, -1);
 }
 <div class="book-card">
     <div class="book-cover">
-        <a asp-controller="books" asp-action="details" asp-route-id="@Model?.Id">
-            <img src="~/img/covers/@imgStr" alt="@title" /> 
+        <a asp-controller="books" asp-action="details" asp-route-id="@book.Id">
+            <img src="~/img/covers/@book.ImgStr()" alt="@book.Title" /> 
         </a>
         <div>
             <p class="stocks">
-                @stocks left
+                @book.Stocks left
             </p>
             <p class="rating">
-                ⭐@rating points
+                ⭐@book.Rating points
             </p>
             <p class="discount">
-                Save %@(discount)           
+                Save %@(book.Discount)           
             </p>
             <p class="price">
-                @(price) TL             
+                @(book.Price()) TL             
             </p>
         </div>
     </div>
     <div>
-        <p>@title</p>
-        <p>@rating points</p>
-        <p>@stocks left</p>
-        <p>@(Model?.Price())TL</p>
+        <p>@book.Title</p>
+        <p>@book.Rating points</p>
+        <p>@book.Stocks left</p>
+        <p>@(book.Price())TL</p>
     </div>
 
 </div>
