@@ -32,9 +32,7 @@
         }
         @if (Model?.Details.Rating != null)
         {
-            <div class="rating">
-                ⭐@book.Rating Points
-            </div>
+            <div class="rating">@book.RatingStr()</div>
         }
         @if (Model?.Details.Price != null)
         {

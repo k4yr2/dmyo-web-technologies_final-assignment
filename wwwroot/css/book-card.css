@@ -69,16 +69,20 @@
     display: block;
 }
 
-.book-card .book-details .price {
+.book-card .book-details > div{
    display: flex;
    flex-wrap: nowrap;
-   justify-content: space-between;
    height: 36px;
    padding: 6px;
 }
 
+.book-card .book-details .price {
+   justify-content: space-between;
+}
+
+
 .book-card .book-details .price .discount {
-    display:flex;
+    display: flex;
     color: black;
     font-weight: 500;
     border: 1px solid, #00000099;
@@ -120,5 +124,9 @@
 .book-card .book-details .price .amount .net {   
     color: green;
     font-size: 18px;
+    font-weight: 500;
+}
+
+.book-card .book-details .rating {
     font-weight: 500;
 }

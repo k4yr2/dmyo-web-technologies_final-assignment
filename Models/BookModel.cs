@@ -55,7 +55,7 @@ namespace muhammedkayraozkaya_241103046.Models
                 stars = "🌟⭐⭐⭐⭐";
             }
 
-            return $"{stars}{Rating} Points";
+            return $"{stars} {Rating} Points";
         }
     }
 
