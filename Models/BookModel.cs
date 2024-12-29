@@ -32,19 +32,25 @@ namespace muhammedkayraozkaya_241103046.Models
         public string ImgStr() => $"{Id:D2}.jpg";
     }
 
-    abstract public class BookProp(BookDetails details)
+    // -
+
+    // - -
+
+    // -
+
+    abstract public class BookProp(BookDetails? details)
     {
         public BookDetails Details { get; set; } = details ?? new();
     }
 
-    public class BookSection(string? title, IEnumerable<BookModel> source, int count)
+    public class BookSection(string? title, IEnumerable<BookModel> source, int count, BookDetails? details) : BookProp(details)
     {
         public string? Title { get; } = title;
 
-        public BookContainer Container { get; } = new(source, count);
+        public BookContainer Container { get; } = new(source, count, details);
     }
 
-    public class BookContainer(IEnumerable<BookModel> source, int count)
+    public class BookContainer(IEnumerable<BookModel> source, int count, BookDetails? details) : BookProp(details)
     {
 		public IEnumerable<BookModel> Source { get; } = source;
 
@@ -55,16 +61,14 @@ namespace muhammedkayraozkaya_241103046.Models
             get
             {
                 return (Count == 0 ? Source : Source.Take(Count))
-                    .Select(b => new BookCard(b));
+                    .Select(b => new BookCard(b, Details));
             }
         }
 	}
 
-    public class BookCard(BookModel book)
+    public class BookCard(BookModel book, BookDetails? details) : BookProp(details)
     {
         public BookModel Book { get; } = book;
-
-        //public BookDetails Details { get; } = details ?? new();
     }
 
     public class BookDetails()
