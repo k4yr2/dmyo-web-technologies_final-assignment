@@ -84,6 +84,15 @@
     transform : translate(-6px, 6px);
 }
 
+.book-card .book-cover .book-info .stocks {
+    top : 0;
+    right : 0;
+    transform : translate(6px, -6px);
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+}
+
 .book-card .book-details {
     display: block;
 }
