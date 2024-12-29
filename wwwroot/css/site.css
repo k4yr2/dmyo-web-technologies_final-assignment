@@ -13,7 +13,7 @@
     user-select: none;
 }
 
-#cl-header {
+#cl-bar {
     height: 88px;
     display: flex;
     align-items: center;
@@ -22,31 +22,31 @@
     border-bottom: 1px solid rgb(156, 157, 146);
 }
 
-#cl-header .left-side {    
+#cl-bar .left-side {    
     display: flex;
     justify-content: space-between;
     flex: 3;
 }
 
-#cl-header .right-side {
+#cl-bar .right-side {
     display: flex;
     justify-content: right;
     flex: 4;
 }
 
-#cl-header a {
+#cl-bar a {
     padding: 8px;
     text-decoration: none;
     font-weight: 500;
 }
 
-#cl-header .logo {
+#cl-bar .logo {
     display: flex;
     height: 40px;
     align-items: center;
 }
 
-#cl-header .logo .label-close {
+#cl-bar .logo .label-close {
     font-weight: 400;
     font-style: italic;
     margin: 4px;
@@ -54,7 +54,7 @@
     color: #00000099;
 }
 
-#cl-header .logo .label-library {
+#cl-bar .logo .label-library {
     font-weight: 700;
     font-size: 28px;
     color: #000000ba;
