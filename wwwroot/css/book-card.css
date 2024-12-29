@@ -45,10 +45,14 @@
   transform: translateY(0);
 }
 
+.book-card .book-cover:hover .book-info > div > div {
+  height: 20px;
+}
+
 .book-card .book-cover .book-info .price {
     bottom : 0;
     right : 0;
-    transform : translate(-6px, 6px);
+    transform : translate(6px, 6px);
 }
 
 .book-card .book-cover .book-info .price .discount {
@@ -72,6 +76,12 @@
 .book-card .book-cover .book-info .price .amount .net  {
     color: #34b534;
     font-size: 14px;
+}
+
+.book-card .book-cover .book-info .rating {
+    bottom : 0;
+    left : 0;
+    transform : translate(-6px, 6px);
 }
 
 .book-card .book-details {
