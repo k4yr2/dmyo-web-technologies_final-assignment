@@ -66,5 +66,59 @@
 }
 
 .book-card .book-details {
-    display: block
+    display: block;
+}
+
+.book-card .book-details .price {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   height: 36px;
+   padding: 6px;
+}
+
+.book-card .book-details .price .discount {
+    display:flex;
+    color: black;
+    font-weight: 500;
+    border: 1px solid, #00000099;
+    border-radius: 10px;
+    align-items: center;
+    user-select: none;
+    background-color: #ccc9dd;
+}
+
+.book-card .book-details .price .discount * {
+    padding: 0px 4px;
+}
+
+.book-card .book-details .price .discount .label {
+    font-size: 14px;
+}
+
+.book-card .book-details .price .discount .value {
+    font-size: 16px;
+}
+
+.book-card .book-details .price .amount {  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.book-card .book-details .price .amount * {   
+    align-content: center;
+    margin-left: 4px;
+}
+
+.book-card .book-details .price .amount .cost {     
+    color: red;
+    font-size: 14px;
+    text-decoration: line-through wavy black 1px;
+}
+
+.book-card .book-details .price .amount .net {   
+    color: green;
+    font-size: 18px;
+    font-weight: 500;
 }

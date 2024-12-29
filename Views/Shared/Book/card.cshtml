@@ -39,7 +39,14 @@
         @if (Model?.Details.Price != null)
         {
             <div class="price">
-                @book.Price() TL;
+                <div class="discount">
+                    <div class="label">Save</div>
+                    <div class="value">@(book.Discount)%</div>
+                </div>
+                <div class="amount">
+                    <div class="cost">@(book.Cost)</div>
+                    <div class="net">@(book.Price()) TL</div>
+                </div>
             </div>
         }
     </div>
