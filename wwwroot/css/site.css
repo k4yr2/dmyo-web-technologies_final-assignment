@@ -20,8 +20,22 @@
     margin: 20px;
 }
 
+#cl-header .left-side {    
+    display: flex;
+    justify-content: space-between;
+    flex: 3;
+}
+
+#cl-header .right-side {
+    display: flex;
+    justify-content: right;
+    flex: 4;
+}
+
 #cl-header a {
+    padding: 8px;
     text-decoration: none;
+    font-weight: 500;
 }
 
 #cl-header .logo {
