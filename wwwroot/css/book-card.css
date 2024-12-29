@@ -24,7 +24,7 @@
     transform: scale(0.90);
 }
 
-.book-card .book-cover > div {
+.book-card .book-cover .book-info > div {
   position: absolute;
   color: white;
   background: rgba(0, 0, 0, 0.9);
@@ -36,10 +36,17 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.book-card .book-cover:hover > div {
+.book-card .book-cover:hover .book-info > div {
   opacity: 1;
   transform: translateY(0);
 }
+
+.book-card .book-cover .book-info .price {
+    bottom : 0;
+    right : 0;
+    transform : translate(-6px, 6px);
+}
+
 
 .book-card .book-details {
     display: block;
