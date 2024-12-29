@@ -1,8 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    var mostDiscount = new BookSection("Today's best deals", EnumerableBooks.MostDiscount, 4);
-    var mostRating = new BookSection("Greatest of library", EnumerableBooks.MostRating, 4);
-    var lessStocks = new BookSection("About to run out", EnumerableBooks.LestStocks, 4);
+    var mostDiscount = new BookSection("Today's best deals", EnumerableBooks.MostDiscount, 4, new BookDetails() { Price = "+" });
+    var mostRating = new BookSection("Greatest of library", EnumerableBooks.MostRating, 4, new BookDetails() { Rating = "+" });
+    var lessStocks = new BookSection("About to run out", EnumerableBooks.LestStocks, 4, new BookDetails() { Stocks = "+" });
 }
 
 <div>
