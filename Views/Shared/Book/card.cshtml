@@ -8,19 +8,16 @@
         <a asp-controller="books" asp-action="details" asp-route-id="@book.Id">
             <img src="~/img/covers/@book.ImgStr()" alt="@book.Title" /> 
         </a>
-        <div class="book-details">
-            <p class="stocks">
-                @book.Stocks left
-            </p>
-            <p class="rating">
-                ⭐@book.Rating points
-            </p>
-            <p class="discount">
-                Save %@(book.Discount)           
-            </p>
-            <p class="price">
-                @(book.Price()) TL             
-            </p>
+        <div class="book-info">
+            <div class="price">
+
+            </div>
+            <div class="rating">
+
+            </div>
+            <div class="stocks">
+
+            </div>
         </div>
     </div>
     <div class="book-details">

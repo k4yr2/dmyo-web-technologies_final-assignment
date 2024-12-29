@@ -24,7 +24,7 @@
     transform: scale(0.90);
 }
 
-.book-card .book-cover div *{
+.book-card .book-cover > div {
   position: absolute;
   color: white;
   background: rgba(0, 0, 0, 0.9);
@@ -36,33 +36,9 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.book-card .book-cover:hover div * {
+.book-card .book-cover:hover > div {
   opacity: 1;
   transform: translateY(0);
-}
- 
-.book-card .book-cover .stocks {
-  top: 0px;
-  left: 0px;
-  transform: translate(-6px, -6px);
-}
-
-.book-card .book-cover .rating {
-  bottom: 0px;
-  left: 0px;
-  transform: translate(-6px, 6px);
-}
-
-.book-card .book-cover .discount {
-  top: 0px;
-  right: 0px;
-  transform: translate(6px, -6px);
-}
-
-.book-card .book-cover .price {
-  bottom: 0px;
-  right: 0px;
-  transform: translate(6px, 6px);
 }
 
 .book-card .book-details {
@@ -79,7 +55,6 @@
 .book-card .book-details .price {
    justify-content: space-between;
 }
-
 
 .book-card .book-details .price .discount {
     display: flex;
