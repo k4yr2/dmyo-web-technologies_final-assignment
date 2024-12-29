@@ -22,13 +22,13 @@
     border-bottom: 1px solid rgb(156, 157, 146);
 }
 
-#cl-bar .left-side {    
+#cl-nav {    
     display: flex;
     justify-content: space-between;
     flex: 3;
 }
 
-#cl-bar .right-side {
+#cl-authentication {
     display: flex;
     justify-content: right;
     flex: 4;
