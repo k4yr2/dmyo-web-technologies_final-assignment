@@ -10,7 +10,7 @@
     {
         @foreach (var book in Model.Display)
         {
-            <partial name="Book/card" model=@book/>
+            <partial name="Book/card" model=@(new BookCard(book))/>
         }
     }
 </div>
