@@ -8,9 +8,9 @@
 <div class="@className">
     @if(Model != null)
     {
-        @foreach (var book in Model.Display)
+        @foreach (var card in Model.Cards)
         {
-            <partial name="Book/card" model=@(new BookCard(book))/>
+            <partial name="Book/card" model=@card/>
         }
     }
 </div>
