@@ -24,16 +24,6 @@
         </div>
     </div>
     <div class="book-details">
-        @if (Model?.Details.Stocks != null)
-        {
-            <div class="stocks">
-                @book.Stocks left
-            </div>
-        }
-        @if (Model?.Details.Rating != null)
-        {
-            <div class="rating">@book.RatingStr()</div>
-        }
         @if (Model?.Details.Price != null)
         {
             <div class="price">
@@ -45,6 +35,16 @@
                     <div class="cost">@(book.Cost)</div>
                     <div class="net">@(book.Price()) TL</div>
                 </div>
+            </div>
+        }
+        @if (Model?.Details.Rating != null)
+        {
+            <div class="rating">@book.RatingStr()</div>
+        }
+        @if (Model?.Details.Stocks != null)
+        {
+            <div class="stocks">
+                Left <div class="value">@book.Stocks</div> in stocks
             </div>
         }
     </div>

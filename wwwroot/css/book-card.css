@@ -129,4 +129,19 @@
 
 .book-card .book-details .rating {
     font-weight: 500;
+    justify-content: center;
+}
+
+.book-card .book-details .stocks {
+    font-weight: 500;
+    justify-content: center;
+}
+
+.book-card .book-details .stocks .value{
+    font-size: 14px;
+    padding: 0px 4px;
+    margin: 0px 4px;
+    border: solid 1px black;
+    border-radius: 16px;
+    user-select: none;
 }
