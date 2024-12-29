@@ -1,3 +1,15 @@
+body {
+    background-color: #E1DCC5;
+}
+
+#cl-header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 120px;
+    z-index: 1000;
+}
+
 #cl-banner {
     height: 32px;
     display: flex;
@@ -59,8 +71,9 @@
     font-size: 28px;
     color: #000000ba;
 }
-body {
-    background-color: #E1DCC5;
+
+#cl-main {
+    margin-top: 150px;
 }
 
 .book-section {
