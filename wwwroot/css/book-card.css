@@ -34,6 +34,10 @@
   font-size: 12px;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .book-card .book-cover:hover .book-info > div {
@@ -47,6 +51,28 @@
     transform : translate(-6px, 6px);
 }
 
+.book-card .book-cover .book-info .price .discount {
+    color: yellowgreen;
+    font-size: 14px;
+}
+
+.book-card .book-cover .book-info .price .amount {
+    display: flex;
+    align-items:flex-end;
+}
+
+.book-card .book-cover .book-info .price .amount > div{
+    padding: 0px 2px;
+}
+
+.book-card .book-cover .book-info .price .amount .cost {
+    color: #ff4545;
+}
+
+.book-card .book-cover .book-info .price .amount .net  {
+    color: #34b534;
+    font-size: 14px;
+}
 
 .book-card .book-details {
     display: block;
