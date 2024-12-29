@@ -51,5 +51,15 @@ namespace muhammedkayraozkaya_241103046.Models
     public class BookCard(BookModel book)
     {
         public BookModel Book { get; } = book;
+
+    }
+
+    public class BookDetails()
+    {
+        public string? Stocks { get; set; }
+
+        public string? Rating { get; set; }
+
+        public string? Price { get; set; }
     }
 }
