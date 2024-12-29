@@ -32,6 +32,11 @@ namespace muhammedkayraozkaya_241103046.Models
         public string ImgStr() => $"{Id:D2}.jpg";
     }
 
+    abstract public class BookProp(BookDetails details)
+    {
+        public BookDetails Details { get; set; } = details ?? new();
+    }
+
     public class BookSection(string? title, IEnumerable<BookModel> source, int count)
     {
         public string? Title { get; } = title;
@@ -60,7 +65,6 @@ namespace muhammedkayraozkaya_241103046.Models
         public BookModel Book { get; } = book;
 
         //public BookDetails Details { get; } = details ?? new();
-
     }
 
     public class BookDetails()
