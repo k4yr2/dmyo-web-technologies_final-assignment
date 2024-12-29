@@ -5,7 +5,7 @@
     padding: 10px;
 }
 
-.book-card .book-cover {
+.book-card .cover {
     background-color: #f5f5f5;
     position: relative;
     border: 1px solid #BABBAE;
@@ -14,17 +14,17 @@
     height: 360px;
 }
 
-.book-card .book-cover img {
+.book-card .cover img {
     position: absolute;
     width: 100%;
     height: 100%;
     transition: all 0.25s ease;
 }
-.book-card .book-cover:hover img{
+.book-card .cover:hover img{
     transform: scale(0.90);
 }
 
-.book-card .book-cover .book-info > div {
+.book-card .cover .info > div {
   position: absolute;
   color: white;
   background: rgba(0, 0, 0, 0.9);
@@ -40,51 +40,51 @@
   align-items: center;
 }
 
-.book-card .book-cover:hover .book-info > div {
+.book-card .cover:hover .info > div {
   opacity: 1;
   transform: translateY(0);
 }
 
-.book-card .book-cover:hover .book-info > div > div {
+.book-card .cover:hover .info > div > div {
   height: 20px;
 }
 
-.book-card .book-cover .book-info .price {
+.book-card .cover .info .price {
     bottom : 0;
     right : 0;
     transform : translate(6px, 6px);
 }
 
-.book-card .book-cover .book-info .price .discount {
+.book-card .cover .info .price .discount {
     color: yellowgreen;
     font-size: 14px;
 }
 
-.book-card .book-cover .book-info .price .amount {
+.book-card .cover .info .price .amount {
     display: flex;
     align-items:flex-end;
 }
 
-.book-card .book-cover .book-info .price .amount > div{
+.book-card .cover .info .price .amount > div{
     padding: 0px 2px;
 }
 
-.book-card .book-cover .book-info .price .amount .cost {
+.book-card .cover .info .price .amount .cost {
     color: #ff4545;
 }
 
-.book-card .book-cover .book-info .price .amount .net  {
+.book-card .cover .info .price .amount .net  {
     color: #34b534;
     font-size: 14px;
 }
 
-.book-card .book-cover .book-info .rating {
+.book-card .cover .info .rating {
     bottom : 0;
     left : 0;
     transform : translate(-6px, 6px);
 }
 
-.book-card .book-cover .book-info .stocks {
+.book-card .cover .info .stocks {
     top : 0;
     right : 0;
     transform : translate(6px, -6px);
@@ -93,22 +93,22 @@
     font-style: italic;
 }
 
-.book-card .book-details {
+.book-card .details {
     display: block;
 }
 
-.book-card .book-details > div{
+.book-card .details > div{
    display: flex;
    flex-wrap: nowrap;
    height: 36px;
    padding: 6px;
 }
 
-.book-card .book-details .price {
+.book-card .details .price {
    justify-content: space-between;
 }
 
-.book-card .book-details .price .discount {
+.book-card .details .price .discount {
     display: flex;
     color: black;
     font-weight: 500;
@@ -119,52 +119,52 @@
     background-color: #ccc9dd;
 }
 
-.book-card .book-details .price .discount * {
+.book-card .details .price .discount * {
     padding: 0px 4px;
 }
 
-.book-card .book-details .price .discount .label {
+.book-card .details .price .discount .label {
     font-size: 14px;
 }
 
-.book-card .book-details .price .discount .value {
+.book-card .details .price .discount .value {
     font-size: 16px;
 }
 
-.book-card .book-details .price .amount {  
+.book-card .details .price .amount {  
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.book-card .book-details .price .amount * {   
+.book-card .details .price .amount * {   
     align-content: center;
     margin-left: 4px;
 }
 
-.book-card .book-details .price .amount .cost {     
+.book-card .details .price .amount .cost {     
     color: red;
     font-size: 14px;
     text-decoration: line-through wavy black 1px;
 }
 
-.book-card .book-details .price .amount .net {   
+.book-card .details .price .amount .net {   
     color: green;
     font-size: 18px;
     font-weight: 500;
 }
 
-.book-card .book-details .rating {
+.book-card .details .rating {
     font-weight: 500;
     justify-content: center;
 }
 
-.book-card .book-details .stocks {
+.book-card .details .stocks {
     font-weight: 500;
     justify-content: center;
 }
 
-.book-card .book-details .stocks .value{
+.book-card .details .stocks .value{
     font-size: 14px;
     padding: 0px 4px;
     margin: 0px 4px;

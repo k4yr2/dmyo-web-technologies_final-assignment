@@ -4,11 +4,11 @@
     var book = Model?.Book ?? new BookModel(-1, -1, -1);
 }
 <div class="book-card">
-    <div class="book-cover">
+    <div class="cover">
         <a asp-controller="books" asp-action="details" asp-route-id="@book.Id">
             <img src="~/img/covers/@book.ImgStr()" alt="@book.Title" /> 
         </a>
-        <div class="book-info">
+        <div class="info">
             <div class="price">
                 <div class="discount">Save @(book.Discount)%</div>
                 <div class="amount">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <div class="book-details">
+    <div class="details">
         @if (Model?.Details.Price != null)
         {
             <div class="price">
