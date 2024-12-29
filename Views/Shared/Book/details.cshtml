@@ -1,0 +1,14 @@
+﻿@model muhammedkayraozkaya_241103046.Models.BookModel
+@{
+	var book = Model ?? new BookModel(-1, -1, -1);
+}
+
+<div class=book-details>
+	<div class="cover">
+		<img src="~/img/covers/@(book.ImgStr())"/>
+	</div>
+	<div class="content">
+		<div class="title">@book.Title</div>
+		<div class="author">@book.Author?.FullName()</div>
+	</div>
+</div>

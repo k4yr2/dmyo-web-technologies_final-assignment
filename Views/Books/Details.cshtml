@@ -1,13 +1,6 @@
 ﻿@model muhammedkayraozkaya_241103046.Models.BookModel;
 @{
-    var title = Model?.Title ?? "Untitled";
-    var imgStr = Model?.ImgStr() ?? string.Empty;
-    var rating = Model?.Rating ?? 0;
-    var stocks = Model?.Stocks ?? 0;
-    var price = Model?.Price() ?? 0;
-    var discount = Model?.Discount ?? 0;
+	var book = Model;
 }
 
-<div>
-    <img src="img/covers/@(imgStr)" />
-</div>
+<partial name="Book/details" model=@(book)/>
