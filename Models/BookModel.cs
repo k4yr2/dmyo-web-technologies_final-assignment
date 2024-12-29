@@ -30,6 +30,33 @@ namespace muhammedkayraozkaya_241103046.Models
         }
 
         public string ImgStr() => $"{Id:D2}.jpg";
+
+        public string RatingStr()
+        {
+            string stars;
+            if (Rating > 4.5d)
+            {
+                stars = "🌟🌟🌟🌟🌟"; 
+            }
+            else if (Rating > 3.5d)
+            {
+                stars = "🌟🌟🌟🌟⭐";
+            }
+            else if (Rating > 2.5d)
+            {
+                stars = "🌟🌟🌟⭐⭐";
+            }
+            else if (Rating > 1.5d)
+            {
+                stars = "🌟🌟⭐⭐⭐";
+            }
+            else 
+            {
+                stars = "🌟⭐⭐⭐⭐";
+            }
+
+            return $"{stars}{Rating} Points";
+        }
     }
 
     // -
