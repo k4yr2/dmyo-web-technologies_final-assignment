@@ -10,6 +10,12 @@
 }
 
 
+.author-card a {
+    text-decoration: none; 
+    color: blueviolet;
+    font-weight: 500;
+}
+
 .author-card .cover {
     background-color: black;
     position: relative;

@@ -4,10 +4,12 @@
 }
 
 <div class="author-card">
-	<div class="cover">
-		<img src="~/img/authors/@author.ImgStr()"/>
-	</div>
-	<div class="details">
-		<div class="name">@author.FullName()</div>
-	</div>
+	<a asp-controller="authors" asp-action="details" asp-route-id=@author.Id>
+		<div class="cover">
+			<img src="~/img/authors/@author.ImgStr()"/>
+		</div>
+		<div class="details">
+			<div class="name">@author.FullName()</div>
+		</div>
+	</a>
 </div>
