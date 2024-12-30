@@ -1,0 +1,31 @@
+﻿.author-details {
+    display: flex;
+    justify-content: center
+}
+
+.author-details .photo {
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.author-details .photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.author-page {
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+    border: solid 1px #babbae;
+}
+
+.author-page .books {
+    flex: 2;
+}
+
+.author-page .author-details {
+    flex: 1;
+
+}

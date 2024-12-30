@@ -1,3 +1,12 @@
 ﻿@model muhammedkayraozkaya_241103046.Models.AuthorModel
+@{
+	var author = Model ?? new AuthorModel(-1);
+}
 
+<div class="author-page">
+	<div class="books">
+		fgh
+	</div>
+	<partial name="author-details" model=@author />
+</div>
 
