@@ -15,7 +15,7 @@ namespace muhammedkayraozkaya_241103046.Controllers
 		[HttpGet, Route("details")]
 		public IActionResult Details(int id)
 		{
-			return View(/*DataStore.authors.Model(id)*/);
+			return View(DataStore.authors.Model(id));
 		}
 	}
 }
