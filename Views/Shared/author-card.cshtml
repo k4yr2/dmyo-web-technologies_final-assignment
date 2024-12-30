@@ -1,0 +1,13 @@
+﻿@model muhammedkayraozkaya_241103046.Models.AuthorModel
+@{
+	var author = Model ?? new AuthorModel(-1);
+}
+
+<div class="author-card">
+	<div class="cover">
+		<img src="~/img/authors/@author.ImgStr()"/>
+	</div>
+	<div class="details">
+		<div class="name">@author.FullName()</div>
+	</div>
+</div>
