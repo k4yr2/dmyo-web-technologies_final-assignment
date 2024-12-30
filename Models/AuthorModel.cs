@@ -55,5 +55,10 @@ namespace muhammedkayraozkaya_241103046.Models
 
             return age;
         }
+
+        public string ImgStr()
+        {
+            return $"{Id}.jpg";
+        }
     }
 }
