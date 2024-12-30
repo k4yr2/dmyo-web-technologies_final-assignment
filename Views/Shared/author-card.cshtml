@@ -3,13 +3,11 @@
 	var author = Model ?? new AuthorModel(-1);
 }
 
-<div class="author-card">
-	<a asp-controller="authors" asp-action="details" asp-route-id=@author.Id>
-		<div class="cover">
-			<img src="~/img/authors/@author.ImgStr()"/>
-		</div>
-		<div class="details">
-			<div class="name">@author.FullName()</div>
-		</div>
-	</a>
-</div>
+<a class="author-card" asp-controller="authors" asp-action="details" asp-route-id=@author.Id>>
+	<div class="cover">
+		<img src="~/img/authors/@author.ImgStr()"/>
+	</div>
+	<div class="details">
+		<div class="name">@author.FullName()</div>
+	</div>
+</a>
