@@ -97,8 +97,13 @@ body {
 }
 
 .author-container {
-    display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    margin: 30px;
+    background-color: #F3EDD7;
+    border: solid 1px #babbae;
+    border-radius: 3px;
+    gap: 20px;
+    padding: 20px;
 }
