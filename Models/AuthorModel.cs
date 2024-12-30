@@ -58,7 +58,7 @@ namespace muhammedkayraozkaya_241103046.Models
 
         public string ImgStr()
         {
-            return $"{Id}.jpg";
+            return $"{Id:D2}.jpg";
         }
     }
 }
