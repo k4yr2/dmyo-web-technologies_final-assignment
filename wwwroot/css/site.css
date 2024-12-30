@@ -95,3 +95,10 @@ body {
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+
+.author-container {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

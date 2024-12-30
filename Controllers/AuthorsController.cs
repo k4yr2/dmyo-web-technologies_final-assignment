@@ -9,7 +9,7 @@ namespace muhammedkayraozkaya_241103046.Controllers
 		[HttpGet, Route("")]
 		public IActionResult Index()
 		{
-			return View(/*DataStore.authors.Models()*/);
+			return View(DataStore.authors.Models());
 		}
 
 		[HttpGet, Route("details")]
