@@ -9,6 +9,19 @@
 	</div>
 	<div class="content">
 		<div class="title">@book.Title</div>
-		<div class="author">@book.Author?.FullName()</div>
+		<div class="flex">
+			<div class="author flex">
+				<div class="label">by</div>
+				<a class="value" asp-controller="authors" asp-action="details" asp-route-id=@book.AuthorId>
+						@book.Author?.FullName()
+				</a>
+			</div>
+			<div class="genre flex">
+				<div class="label">like</div>
+				<a class="value" asp-controller="books" asp-action="index" asp-route-genre=@book.GenreId>
+					@book.Genre?.Name
+				</a>
+			</div>
+		</div>
 	</div>
 </div>

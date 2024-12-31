@@ -17,3 +17,24 @@
     width: 100%;
     height: 100%;
 }
+
+.book-details .content {
+    padding: 0px 20px;
+}
+
+.book-details .content .flex > * {
+    padding: 4px;
+}
+
+.book-details .content .title {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.book-details .content .flex {
+    display: flex;
+}
+
+.book-details .content .flex > * {
+    padding: 4px;
+}
