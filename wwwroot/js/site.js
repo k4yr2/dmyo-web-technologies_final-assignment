@@ -21,15 +21,18 @@ setInterval(() => {
     updateCards();
 }, 0);
 
-$(document).ready(function () {
+$(function () {
     // Artı butonuna tıklama olayını dinliyoruz
-    $('.book-card .cover .info .add').on('click', function () {
-        var bookId = $(this).data('book-id'); 
+    $(document).on('click', '.book-card .cover .info .add .button', function () {
+        var bookId = $(this).data('book-id');
 
         $.ajax({
             url: '/account/add-book',
             type: 'POST',
-            data: { id: bookId }
+            data: { id: bookId },
+            success: () => {
+                alert("added to user books");
+            }
         });
     });
 });
