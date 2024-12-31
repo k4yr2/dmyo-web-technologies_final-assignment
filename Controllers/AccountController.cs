@@ -54,5 +54,13 @@ namespace muhammedkayraozkaya_241103046.Controllers
 
             return RedirectToAction("Index", "Account");
         }
+
+        [HttpGet, Route("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

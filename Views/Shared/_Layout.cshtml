@@ -27,8 +27,16 @@
                 <a href="/authors"> Authors </a>
             </nav>
             <div id="cl-authentication">
-                <a asp-controller="account" asp-action="login"> Log In </a>
-                <a asp-controller="account" asp-action="signup"> Sign Up </a>
+                @if (User.Identity?.IsAuthenticated ?? false)
+                {
+                    <a asp-controller="account" asp-action="index">@User.Identity.Name</a>
+                    <a asp-controller="account" asp-action="logout">out</a>
+                }
+                else
+                {
+                    <a asp-controller="account" asp-action="login"> Log In </a>
+                    <a asp-controller="account" asp-action="signup"> Sign Up </a>
+                }
             </div>
         </div>
     </header>
