@@ -7,9 +7,19 @@ namespace muhammedkayraozkaya_241103046.Controllers
     public class BooksController : Controller
     {
         [HttpGet, Route("")]
-        public IActionResult Index()
+        public IActionResult Index(int? genre, int? author)
         {
-            return View(DataStore.books.Models());
+            var books = DataStore.books.Models();
+            if (genre.HasValue)
+            {
+				books = books.Where(b => b.GenreId == genre.Value);
+            }
+			if (author.HasValue)
+			{
+				books = books.Where(b => b.AuthorId == author.Value);
+			}
+
+			return View(books);
         }
 
         [HttpGet, Route("details")]
