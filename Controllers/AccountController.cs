@@ -79,5 +79,42 @@ namespace muhammedkayraozkaya_241103046.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-    }
+
+        [HttpGet, Route("signup")]
+        public IActionResult Signup()
+        {
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                return RedirectToAction("Index", "Account");
+            }
+
+            return View();
+        }
+
+		[HttpPost, Route("signup")]
+		public async Task<IActionResult> Signup(string username, string password, string role)
+		{
+			var user = DataStore.users.Models().FirstOrDefault(u => u.Username == username && u.Password == password);
+
+			if (user != null)
+			{
+				ViewBag.Error = "Username already exists";
+				return View();
+			}
+
+            DataStore.users.Append(user = new Models.UserModel(DataStore.users.Models().Count(), username, password, role));
+
+			var claims = new List<Claim>
+			{
+				new (ClaimTypes.Name, user.Username),
+				new (ClaimTypes.Role, user.Role)
+			};
+
+			var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+			return RedirectToAction("Index", "Account");
+		}
+	}
 }
