@@ -11,31 +11,37 @@ namespace muhammedkayraozkaya_241103046.Controllers
 	{
         [HttpGet, Route("login")]
 		public IActionResult Login()
-		{
-			return View();
+        {
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
 		}
 
         [HttpPost, Route("login")]
         public async Task<IActionResult> Login(string username, string password)
         {
             var user = DataStore.users.Models().FirstOrDefault(u => u.Username == username && u.Password == password);
-            if (user != null)
+            
+            if(user == null)
             {
-                var claims = new List<Claim>
-                {
-                    new (ClaimTypes.Name, user.Username),
-                    new (ClaimTypes.Role, user.Role)
-                };
-
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-
-                return RedirectToAction("Login");
+                ViewBag.Error = "Invalid username or password";
+                return View();
             }
 
-            ViewBag.Error = "Geçersiz kullanıcı adı veya şifre";
-            return View();
+            var claims = new List<Claim>
+            {
+                new (ClaimTypes.Name, user.Username),
+                new (ClaimTypes.Role, user.Role)
+            };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
