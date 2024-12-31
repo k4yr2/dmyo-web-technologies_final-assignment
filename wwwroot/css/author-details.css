@@ -1,6 +1,8 @@
 ﻿.author-details {
     display: flex;
-    justify-content: center
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
 }
 
 .author-details .photo {
@@ -12,6 +14,11 @@
 .author-details .photo img {
     width: 100%; height: 100%;
     object-fit: cover;
+}
+
+.author-details .content {
+    font-weight: 500;
+    padding: 10px;
 }
 
 .author-page {
