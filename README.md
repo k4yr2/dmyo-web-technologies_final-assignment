@@ -1,3 +1,19 @@
+Web Assignment
+The project should be coded as a .Net core MVC project.
+A website design will be carried out.
+ It should consist of at least 5 pages.
+ The homepage should be the general welcome of the site and should contain transition links to other pages.
+ All links should be defined on the site.
+ Images should work locally. Src links should not be on the web
+ Repeating sections can be created with Razor syntax.
+There should be no similar and identical projects.
+The project name should be “studentName_studentNo”
+The project name WebApplication and its derivatives will not be accepted. Projects with the "Exam" name will not be accepted.
+
+January 2, 2025 Deadline.
+The homework will be presented and delivered in a suitable time frame
+
+
 #### Genres
 1. Novel
 2. History
