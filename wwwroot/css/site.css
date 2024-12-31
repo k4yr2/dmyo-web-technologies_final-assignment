@@ -106,3 +106,11 @@ body {
     gap: 20px;
     padding: 20px;
 }
+
+.pokoko {
+    padding: 10px;
+}
+
+label {
+    width: 100px;
+}

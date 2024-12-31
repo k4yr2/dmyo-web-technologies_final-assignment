@@ -1,4 +1,4 @@
-﻿<form method="post" asp-action="Login">
+﻿<form class="pokoko" method="post" asp-action="Login">
 	<div>
 		<label for="username">Kullanıcı Adı:</label>
 		<input type="text" id="username" name="username" required />
@@ -11,3 +11,8 @@
 		<button type="submit">Giriş Yap</button>
 	</div>
 </form>
+
+
+<div>
+	@(User.Identity?.Name)
+</div>

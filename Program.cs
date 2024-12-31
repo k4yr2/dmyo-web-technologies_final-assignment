@@ -3,8 +3,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddAuthentication("CookieAuth")
-.AddCookie("CookieAuth", options =>
+builder.Services.AddAuthentication("Cookies")
+.AddCookie("Cookies", options =>
 {
 	options.LoginPath = "/account/login";
 	options.AccessDeniedPath = "/Account/access-denied";
