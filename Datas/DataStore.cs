@@ -15,7 +15,7 @@ namespace muhammedkayraozkaya_241103046.Datas
 
         static DataStore()
         {
-            users.Append(new UserModel(0, "k4yr2", "12341"));
+            users.Append(new UserModel(0, "k4yr2", "12341", "admin"));
 
             DataSample.AppGenres(genres);
             DataSample.AppAuthors(authors);
