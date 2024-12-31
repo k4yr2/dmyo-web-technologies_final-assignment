@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using muhammedkayraozkaya_241103046.Datas;
+using System.Collections.Generic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace muhammedkayraozkaya_241103046.Models
@@ -12,6 +13,8 @@ namespace muhammedkayraozkaya_241103046.Models
         public DateTime? BirthDate { get; set; }
 
         public DateTime? DeathDate { get; set; }
+
+        public IEnumerable<BookModel> Books { get; } = DataStore.books.Models().Where(b => b.AuthorId == id);
 
         public string? FullName()
         {
