@@ -11,7 +11,7 @@
         <div class="info">
             @if(User.Identity?.IsAuthenticated ?? false)
             {
-                <button class="add" book-id="@book.Id">+</button>
+                <button class="add" data-book-id=@book.Id>+</button>
             }
             <div class="price">
                 <div class="discount">Save @(book.Discount)%</div>

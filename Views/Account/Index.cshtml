@@ -4,14 +4,20 @@
 }
 
 <div class="account-details">
-	<div>
-		@user.BookIDs.Length
-		@foreach (var book in user.Books)
+	<div class="books">
+		@if (user.Books.Length == 0)
 		{
-			<partial name="Book/details" model=@book />
+			<div>No books added yet</div>
+		}
+		else
+		{
+			@foreach (var book in user.Books)
+			{
+				<partial name="Book/details" model=@book />
+			}
 		}
 	</div>
-	<div>
+	<div class="infos">
 		<div>
 			<img src="~/img/user.jpg" />
 		</div>
