@@ -5,7 +5,9 @@ namespace muhammedkayraozkaya_241103046.Datas
 {
     static public class DataStore
     {
-        static public readonly DataList<GenreModel> genres = new();
+		static public readonly DataList<UserModel> users = new();
+
+		static public readonly DataList<GenreModel> genres = new();
 
         static public readonly DataList<AuthorModel> authors = new();
 
@@ -13,6 +15,8 @@ namespace muhammedkayraozkaya_241103046.Datas
 
         static DataStore()
         {
+            users.Append(new UserModel(0, "k4yr2", "12341"));
+
             DataSample.AppGenres(genres);
             DataSample.AppAuthors(authors);
             DataSample.AppBooks(books);
