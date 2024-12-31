@@ -8,7 +8,7 @@
 		@user.BookIDs.Length
 		@foreach (var book in user.Books)
 		{
-			<partial name="book-details" model=@book />
+			<partial name="Book/details" model=@book />
 		}
 	</div>
 	<div>

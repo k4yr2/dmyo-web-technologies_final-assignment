@@ -11,9 +11,7 @@
         <div class="info">
             @if(User.Identity?.IsAuthenticated ?? false)
             {
-                <a class="add" asp-protocol="p" asp-controller="account" asp-action="AddBook" asp-route-id="@book.Id">
-                    +
-                </a>
+                <button class="add" book-id="@book.Id">+</button>
             }
             <div class="price">
                 <div class="discount">Save @(book.Discount)%</div>
