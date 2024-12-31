@@ -3,6 +3,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddAuthentication("CookieAuth")
+.AddCookie("CookieAuth", options =>
+{
+	options.LoginPath = "/account/login";
+	options.AccessDeniedPath = "/Account/access-denied";
+}); 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
