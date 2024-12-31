@@ -1,3 +1,31 @@
-﻿<div class="pokoko">
-	Welcome @(User.Identity?.Name ?? "unnamed")!
+﻿@model muhammedkayraozkaya_241103046.Models.UserModel;
+@{
+	var user = Model ?? throw new ArgumentNullException();
+}
+
+<div class="account-details">
+	<div>
+		@user.BookIDs.Length
+		@foreach (var book in user.Books)
+		{
+			<partial name="book-details" model=@book />
+		}
+	</div>
+	<div>
+		<div>
+			<img src="~/img/user.jpg" />
+		</div>
+		<div class="username">
+			<label>Username</label>
+			<div class="value">@user.Username</div>
+		</div>
+		<div class="role">
+			<label>Role</label>
+			<div class="value">@user.Role</div>
+		</div>
+		<div class="password">
+			<label>Password</label>
+			<div class="value">@user.Password</div>
+		</div>
+	</div>
 </div>

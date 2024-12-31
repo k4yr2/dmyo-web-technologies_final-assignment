@@ -1,4 +1,5 @@
 ﻿using muhammedkayraozkaya_241103046.Datas;
+using System.Xml.Linq;
 
 namespace muhammedkayraozkaya_241103046.Models
 {
@@ -10,7 +11,7 @@ namespace muhammedkayraozkaya_241103046.Models
 
         public string Role { get; set; } = role;
 
-		public int[] BookIDs { get; set; } = Array.Empty<int>();
+		public int[] BookIDs { get; set; } = [];
 
 		public BookModel?[] Books
 		{
@@ -18,6 +19,19 @@ namespace muhammedkayraozkaya_241103046.Models
 			{
 				return BookIDs.Select(DataStore.books.Model).ToArray();
             }
+		}
+
+		public void AddBook(int id)
+		{
+			if (BookIDs.Contains(id))
+			{
+				return;
+			}
+
+			int[] newArray = new int[BookIDs.Length + 1];
+			Array.Copy(BookIDs, newArray, BookIDs.Length);
+			newArray[BookIDs.Length] = id;
+			BookIDs = newArray; 
 		}
     }
 }

@@ -17,15 +17,23 @@ namespace muhammedkayraozkaya_241103046.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            return View();
+            return View(DataStore.users.Models().FirstOrDefault(d => d.Username == User.Identity?.Name));
         }
 
         [HttpPost, Route("add-book")]
         public IActionResult AddBook(int id)
         {
-            
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                var user = DataStore.users.Models().FirstOrDefault(d => d.Username == User.Identity?.Name);
+                if(user != null)
+                {
+                    user.AddBook(id);
 
-            return Content("");
+                } 
+            }
+
+            return Content(""); 
         }
 
 

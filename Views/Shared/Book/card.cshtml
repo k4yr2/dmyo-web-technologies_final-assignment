@@ -11,7 +11,7 @@
         <div class="info">
             @if(User.Identity?.IsAuthenticated ?? false)
             {
-                <a class="add" asp-controller="account" asp-action="add-book" asp-route-id="@book.Id">
+                <a class="add" asp-protocol="p" asp-controller="account" asp-action="AddBook" asp-route-id="@book.Id">
                     +
                 </a>
             }
