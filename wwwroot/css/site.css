@@ -85,10 +85,9 @@ body {
 }
 
 .book-container {
-    display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-items: center;
 }
 
 .book-container.line {
