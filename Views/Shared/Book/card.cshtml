@@ -9,6 +9,12 @@
             <img src="~/img/covers/@book.ImgStr()" alt="@book.Title" /> 
         </a>
         <div class="info">
+            @if(User.Identity?.IsAuthenticated ?? false)
+            {
+                <a class="add" asp-controller="account" asp-action="add-book" asp-route-id="@book.Id">
+                    +
+                </a>
+            }
             <div class="price">
                 <div class="discount">Save @(book.Discount)%</div>
                 <div class="amount">

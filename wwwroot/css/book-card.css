@@ -24,7 +24,7 @@
     transform: scale(0.90);
 }
 
-.book-card .cover .info > div {
+.book-card .cover .info > * {
   position: absolute;
   color: white;
   background: rgba(0, 0, 0, 0.9);
@@ -40,13 +40,19 @@
   align-items: center;
 }
 
-.book-card .cover:hover .info > div {
+.book-card .cover:hover .info > * {
   opacity: 1;
   transform: translateY(0);
 }
 
-.book-card .cover:hover .info > div > div {
+.book-card .cover:hover .info > * > * {
   height: 20px;
+}
+
+.book-card .cover .info .add {
+    top : 0;
+    left : 0;
+    transform : translate(-6px, -6px);
 }
 
 .book-card .cover .info .price {

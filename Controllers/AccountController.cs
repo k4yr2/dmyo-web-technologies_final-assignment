@@ -20,6 +20,15 @@ namespace muhammedkayraozkaya_241103046.Controllers
             return View();
         }
 
+        [HttpPost, Route("add-book")]
+        public IActionResult AddBook(int id)
+        {
+            
+
+            return Content("");
+        }
+
+
         [HttpGet, Route("login")]
 		public IActionResult Login()
         {
