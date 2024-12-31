@@ -40,12 +40,12 @@
   align-items: center;
 }
 
-.book-card .cover:hover .info > * {
+.book-card .cover:hover .info > div {
   opacity: 1;
   transform: translateY(0);
 }
 
-.book-card .cover:hover .info > * > * {
+.book-card .cover:hover .info > div > div {
   height: 20px;
 }
 
