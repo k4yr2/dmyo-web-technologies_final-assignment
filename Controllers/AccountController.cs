@@ -9,12 +9,23 @@ namespace muhammedkayraozkaya_241103046.Controllers
 	[Route("account")]
 	public class AccountController : Controller
 	{
+        [HttpGet, Route("")]
+        public IActionResult Index()
+        {
+            if (!User.Identity?.IsAuthenticated ?? true)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View();
+        }
+
         [HttpGet, Route("login")]
 		public IActionResult Login()
         {
             if (User.Identity?.IsAuthenticated ?? false)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Account");
             }
 
             return View();
@@ -41,7 +52,7 @@ namespace muhammedkayraozkaya_241103046.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Account");
         }
     }
 }
