@@ -10,6 +10,7 @@
     position: relative;
     width: 275px;
     height: 425px;
+    flex-shrink: 0;
 }
 
 .book-details .cover img {
@@ -22,8 +23,8 @@
     padding: 0px 20px;
 }
 
-.book-details .content .flex > * {
-    padding: 4px;
+.book-details .content .flex {
+    display: flex;
 }
 
 .book-details .content .title {
@@ -31,10 +32,35 @@
     font-weight: 500;
 }
 
-.book-details .content .flex {
-    display: flex;
+.book-details .content .source {
+    height: 30px;
 }
 
-.book-details .content .flex > * {
+.book-details .content .source > * {
     padding: 4px;
+}
+
+.book-details .content .stocks {
+    padding: 4px;
+    height: 30px;
+}
+
+.book-details .content .stocks * {
+    margin: 0px 4px;
+    padding: 0px 4px;
+    border: solid 1px black;
+    border-radius: 30px;
+}
+
+.book-details .content .rating {
+    height: 30px;
+    font-weight: 500;
+}
+
+.book-details .content .rating > * {
+    padding: 4px;
+}
+
+.book-details .content .description {
+    flex: 1
 }

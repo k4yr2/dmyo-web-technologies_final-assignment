@@ -5,7 +5,10 @@
 
 <div class="author-page">
 	<div class="books">
-		fgh
+		@foreach(var book in author.Books)
+		{
+			<partial name="Book/preview" model=@book />
+		}
 	</div>
 	<partial name="author-details" model=@author />
 </div>

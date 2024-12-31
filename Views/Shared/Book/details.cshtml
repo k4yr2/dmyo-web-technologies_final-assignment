@@ -9,19 +9,27 @@
 	</div>
 	<div class="content">
 		<div class="title">@book.Title</div>
-		<div class="flex">
-			<div class="author flex">
-				<div class="label">by</div>
-				<a class="value" asp-controller="authors" asp-action="details" asp-route-id=@book.AuthorId>
-						@book.Author?.FullName()
-				</a>
-			</div>
-			<div class="genre flex">
-				<div class="label">like</div>
-				<a class="value" asp-controller="books" asp-action="index" asp-route-genre=@book.GenreId>
-					@book.Genre?.Name
-				</a>
-			</div>
+		<div class="source flex">
+			<div class="label">by</div>
+			<a class="value" asp-controller="authors" asp-action="details" asp-route-id=@book.AuthorId>
+				@book.Author?.FullName()
+			</a>
+			<div class="label">like</div>
+			<a class="value" asp-controller="books" asp-action="index" asp-route-genre=@book.GenreId>
+			@book.Genre?.Name
+			</a>
+		</div>
+		<div class="stocks flex">
+			left
+			<div class="value">@book.Stocks</div>
+			in stocks
+		</div>
+		<div class="rating flex">
+			<div class="label">Rating</div>
+			<div class="symbol">@book.SymbolStr()</div>
+		</div>
+		<div class="description flex">
+			@book.Description
 		</div>
 	</div>
 </div>

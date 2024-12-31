@@ -1,66 +1,59 @@
-﻿.book-details {
+﻿.book-preview {
     display: flex;
     margin: 24px;
     padding: 24px;
     border: solid 1px #9c9d92;
     border-radius: 5px;
+    background-color: #F9F9F9;
 }
 
-.book-details .cover {
+.book-preview .cover {
     position: relative;
     width: 275px;
     height: 425px;
     flex-shrink: 0;
 }
 
-.book-details .cover img {
+.book-preview .cover img {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.book-details .content {
+.book-preview .content {
     padding: 0px 20px;
 }
 
-.book-details .content .flex {
+.book-preview .content .flex {
     display: flex;
 }
 
-.book-details .content .title {
+.book-preview .content .title {
     font-size: 36px;
     font-weight: 500;
 }
 
-.book-details .content .source {
-    height: 30px;
-}
-
-.book-details .content .source > * {
-    padding: 4px;
-}
-
-.book-details .content .stocks {
+.book-preview .content .stocks {
     padding: 4px;
     height: 30px;
 }
 
-.book-details .content .stocks * {
+.book-preview .content .stocks * {
     margin: 0px 4px;
     padding: 0px 4px;
     border: solid 1px black;
     border-radius: 30px;
 }
 
-.book-details .content .rating {
+.book-preview .content .rating {
     height: 30px;
     font-weight: 500;
 }
 
-.book-details .content .rating > * {
+.book-preview .content .rating > * {
     padding: 4px;
 }
 
-.book-details .content .description {
+.book-preview .content .description {
     flex: 1
 }
