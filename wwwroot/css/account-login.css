@@ -1,0 +1,31 @@
+﻿.account-login {
+    display: flex;
+    margin: 30px;
+}
+
+.account-login .form {
+    flex: 1;
+}
+
+.account-login .users {
+    flex 2;
+    align-items: center;
+    border: 1px solid #babbae;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.account-login .users .user {
+    padding: 20px;
+}
+
+.account-login .users .user > div{
+    display: flex;
+}
+.account-login .users .user > div > div {
+    padding: 6px;    
+    width: 80px;
+}
+.account-login .users .user > div > div.value{
+    font-weight: 500;
+}
