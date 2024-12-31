@@ -11,6 +11,12 @@
 		<div>
 			<button type="submit">Giriş Yap</button>
 		</div>
+		@if (ViewBag.Error != null)
+		{
+			<div style="color: red; padding: 8px">
+				@ViewBag.Error
+			</div>
+		}
 	</form>
 	<div class="users">
 		@foreach(var user in DataStore.users.Models())

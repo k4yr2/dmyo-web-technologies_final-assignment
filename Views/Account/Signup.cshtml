@@ -14,4 +14,10 @@
 	<div>
 		<button type="submit">Sign Up</button>
 	</div>
+	@if(ViewBag.Error != null)
+	{
+		<div style="color: red; padding: 8px">
+			@ViewBag.Error
+		</div>
+	}
 </form>

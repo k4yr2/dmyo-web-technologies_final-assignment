@@ -52,8 +52,20 @@ namespace muhammedkayraozkaya_241103046.Controllers
         public async Task<IActionResult> Login(string username, string password)
         {
             var user = DataStore.users.Models().FirstOrDefault(u => u.Username == username && u.Password == password);
-            
-            if(user == null)
+
+            if (string.IsNullOrEmpty(username))
+            {
+				ViewBag.Error = "Username cannot be null or empty";
+				return View();
+			}
+
+			if (string.IsNullOrEmpty(password))
+			{
+				ViewBag.Error = "Password cannot be null or empty";
+				return View();
+			}
+
+			if (user == null)
             {
                 ViewBag.Error = "Invalid username or password";
                 return View();
@@ -94,7 +106,7 @@ namespace muhammedkayraozkaya_241103046.Controllers
 		[HttpPost, Route("signup")]
 		public async Task<IActionResult> Signup(string username, string password, string role)
 		{
-			var user = DataStore.users.Models().FirstOrDefault(u => u.Username == username && u.Password == password);
+			var user = DataStore.users.Models().FirstOrDefault(u => u.Username == username);
 
 			if (user != null)
 			{
