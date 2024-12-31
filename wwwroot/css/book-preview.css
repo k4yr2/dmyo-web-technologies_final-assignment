@@ -9,8 +9,8 @@
 
 .book-preview .cover {
     position: relative;
-    width: 275px;
-    height: 425px;
+    width: 200px;
+    height: 325px;
     flex-shrink: 0;
 }
 
@@ -21,6 +21,7 @@
 }
 
 .book-preview .content {
+    position: relative;
     padding: 0px 20px;
 }
 
@@ -56,4 +57,10 @@
 
 .book-preview .content .description {
     flex: 1
+}
+
+.book-preview .content .goto {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }

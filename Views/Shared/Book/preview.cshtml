@@ -21,5 +21,8 @@
 		<div class="description flex">
 			@book.Description
 		</div>
+		<a class="goto" asp-controller="books" asp-action="details" asp-route-id=@book.Id>
+			examine the book
+		</a>
 	</div>
 </div>
